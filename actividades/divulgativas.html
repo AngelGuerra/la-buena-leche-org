@@ -1,0 +1,103 @@
+---
+layout: default
+title: Bienvendido
+description: Asociación La Buena Leche
+css: actividades-divulgativas
+---
+{% assign current = site.mottos | where: "year", 2018 | first %}
+{% assign mottos  = site.mottos | where_exp: "motto", "motto.year != 2018" | sort: "year" %}
+
+{% asset 'actividades/divulgativas/talleres.jpg' magick:resize=1140 magick:quality=90 alt='Un grupo de personas en un taller organizado por la asociación' class='img-fluid rounded mx-auto d-block' %}
+
+<h1>Actividades Divulgativas</h1>
+
+<div class="row">
+  <div class="col-12 col-lg-4">
+    <section>
+      <h2>Talleres</h2>
+
+      <p>Ofrecidos como actividades puntuales:</p>
+      <ul>
+        <li>Porteo</li>
+        <li>Masaje infantil</li>
+        <li>Estiramientos para las mamás con su bebé encima</li>
+        <li>Herramientas para manejar el stress durante la lactancia</li>
+        <li>Trabajo de suelo pélvico</li>
+      </ul>
+    </section>
+  </div>
+
+  <div class="col-12 col-lg-4">
+    <section>
+      <h2>Conferencias</h2>
+
+      <p>Ofrecemos a grupos y centros interesados diferentes charlas:</p>
+      <ul>
+        <li>Lactancia materna: práctica, dudas, principales dificultades y papel de los grupos de apoyo</li>
+        <li>Lactancia: como empezar</li>
+        <li>El rol del padre en la lactancia materna</li>
+        <li>Alimentación complementaria y destete</li>
+        <li>Cómo funcionan los grupos de apoyo (charla-taller)</li>
+      </ul>
+
+    </section>
+  </div>
+  <div class="col-12 col-lg-4">
+    <section>
+      <h2>Exposiciones</h2>
+
+      <ul>
+        <li>Material de lactancia</li>
+        <li>Pinturas de Paz Treuquil (pintura indígena sobre la mujer)</li>
+        <li>Fotografías</li>
+        <li>Posters temáticos</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<section>
+  <h2>Semana Mundial de Lactancia Materna</h2>
+
+  <p>
+    La semana mundial de la lactancia materna se crea en 1992 por la WABA y UNICEF con el objetivo de difundir y
+    promover los beneficios de la
+    lactancia materna, ya que la tasa había disminuido drásticamente en las décadas anteriores.
+  </p>
+
+  <p>
+    Se celebra durante la primera semana de agosto a nivel mundial. En Europa debido a la dispersión vacacional se
+    traslada a la primera semana de octubre.
+  </p>
+
+  <p>Cada año la preside un lema diferente:</p>
+
+  <div class="card text-center mb-3">
+    <div class="card-header">{{ current.year }}</div>
+    <div class="card-body">
+      <p class="card-text">{{ current.title }}</p>
+    </div>
+  </div>
+
+  <p class="text-right">
+      <button class="btn btn-link text-muted my-3" type="button" data-toggle="collapse" data-target="#collapseMottos" aria-expanded="false" aria-controls="collapseMottos">
+          + Ver lemas de años anteriores
+        </button>
+  </p>
+
+  <div class="collapse" id="collapseMottos">
+    <div class="card-columns">
+      {% for motto in mottos reversed %}
+        <div class="card">
+          <div class="card-header">{{ motto.year }}</div>
+          <div class="card-body">
+            <p class="card-text">{{ motto.title }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <p class="help">Fuente: <a href="//es.wikipedia.org/wiki/Semana_Mundial_de_la_Lactancia_Materna" target="_blank" rel="nofollow">Wikipedia</a></p>
+  </div>
+
+</section>

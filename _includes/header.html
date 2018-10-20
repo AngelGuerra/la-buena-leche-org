@@ -1,0 +1,82 @@
+<div class="container">
+  <a href="/" title="Asociación La Buena Leche" class="logo-principal">
+    {% asset logo.png class="mx-auto d-block" alt="Logo de la Asociación La Buena Leche" %}
+  </a>
+</div>
+
+<nav class="navbar navbar-expand-lg">
+  <div class="container">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/"><i class="fa fa-home"></i> <span class="sr-only">(actual)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/quienes-somos">Quiénes somos</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="activities-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Actividades
+          </a>
+          <div class="dropdown-menu" aria-labelledby="activities-dropdown">
+            <a class="dropdown-item" href="/actividades/divulgativas">Actividades divulgativas</a>
+            <a class="dropdown-item" href="/actividades/ludicas">Actividades lúdicas</a>
+            <a class="dropdown-item" href="/actividades/calendario">Calendario de actividades</a>
+            <a class="dropdown-item" href="/actividades/disciplina-positiva">Taller Disciplina Positiva</a>
+            <a class="dropdown-item" href="/actividades/semana-mundial-2018">Semana Mundial 2018</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/encuentros">Encuentros</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="materials-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Material
+          </a>
+          <div class="dropdown-menu" aria-labelledby="materials-dropdown">
+            <a class="dropdown-item" href="/material/extractores-de-leche">Extractores de leche</a>
+            <a class="dropdown-item" href="/material/prestamo-de-libros">Préstamo de libros</a>
+            <a class="dropdown-item" href="/material/material-divulgativo">Material divulgativo</a>
+            <a class="dropdown-item" href="/material/material-de-muestra">Material de muestra</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="info-dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Información
+          </a>
+          <div class="dropdown-menu" aria-labelledby="info-dropdown">
+            <a class="dropdown-item" href="/informacion/como-empezar">Cómo empezar</a>
+            <a class="dropdown-item" href="/informacion/beneficios">Beneficios</a>
+            <a class="dropdown-item" href="/informacion/problemas-y-soluciones">Problemas y soluciones</a>
+            <a class="dropdown-item" href="/informacion/extraccion-de-leche">Extracción de leche</a>
+            <a class="dropdown-item" href="/informacion/destete">Destete</a>
+            <a class="dropdown-item" href="/informacion/lactancia-y-trabajo">Lactancia y trabajo</a>
+            <a class="dropdown-item" href="/informacion/grupos-de-apoyo">Grupos de apoyo</a>
+            <a class="dropdown-item" href="/informacion/otros-enlaces">Otros enlaces</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{site.social.blog}}" target="_blank">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/asociate">Asóciate</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/contacto">Contacta</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="//es-es.facebook.com/{{site.social.facebook}}" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="//twitter.com/{{site.social.twitter}}" target="_blank"><i class="fab fa-twitter-square"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

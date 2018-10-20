@@ -1,0 +1,56 @@
+---
+layout: default
+title: Bienvendido
+description: Asociación La Buena Leche
+css: encuentros
+---
+{% assign meetings = site.meetings | sort: "order" %}
+
+{% asset 'encuentros/encuentros.jpg' magick:resize=1140 magick:quality=90 alt='Una reunión desde la perspectiva de uno de los asistentes' class='img-fluid rounded mx-auto d-block' %}
+
+<h1>Encuentros</h1>
+
+<div class="row">
+  <section class="col-12 col-sm-6">
+    <p>
+      Queremos crear una red de apoyo de madre a madre con la experiencia de todas, por medio de encuentros periódicos a los que puede asistir toda persona del entorno de la mujer lactante (pareja, familiares, personal sanitario, etc...)
+    </p>
+
+    <p>
+      <strong>En los encuentros podrás:</strong>
+      <ul>
+        <li>Encontrar información general sobre lactancia y crianza</li>
+        <li>Plantear tus dudas</li>
+        <li>Solicitar la observación de una toma</li>
+        <li>Obtener el apoyo emocional que necesitas</li>
+        <li>Conocer material de lactancia</li>
+        <li>Aprender a portear</li>
+      </ul>
+    </p>
+
+    <p>
+      También disponemos de un servicio de <a href="/contacto">atención telefónica y correo electrónico</a>.
+    </p>
+  </section>
+  <section class="col-12 col-sm-6">
+    <ul class="list-group encuentros-ul">
+
+      {% for meeting in meetings %}
+        <li class="list-group-item">
+          <address>
+            <a href="{{ meeting.maps }}" class="arrow-maps" data-toggle="tooltip" data-placement="top" title="Ver en Google Maps" target="_blank">
+              <i class="fa fa-location-arrow"></i>
+              <strong>{{ meeting.location }}</strong>
+            </a>{% if meeting.location_help %} ({{meeting.location_help}}){% endif %}<br/>
+            {{ meeting.place }}<br/>
+            {% if meeting.street %}
+              {{ meeting.street }}{% if meeting.street_help %} ({{meeting.street_help}}){% endif %}<br/>
+            {% endif %}
+            {{ meeting.day }}:<br/>
+            De {{ meeting.start }} a {{ meeting.end }}
+          </address>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+</div>

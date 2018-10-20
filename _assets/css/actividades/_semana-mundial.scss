@@ -1,0 +1,15 @@
+#semana-mundial,
+#disciplina-positiva {
+  img {
+    margin: 15px auto;
+    @media (min-width: 768px) {
+      max-width: 75%;
+    }
+    @media (min-width: 992px) {
+      max-width: 60%;
+    }
+    @media (min-width: 1200px) {
+      max-width: 50%;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+	<head>
+		{% include head.html %}
+	</head>
+	<body>
+        <header>
+            {% include header.html %}
+        </header>
+        <main id="{{page.css}}" class="container slide-top">
+            {{ content }}
+        </main>
+        <footer>
+            {% include footer.html %}
+        </footer>
+
+        {% include scripts.html %}
+	</body>
+</html>

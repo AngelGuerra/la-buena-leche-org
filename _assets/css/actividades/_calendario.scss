@@ -1,0 +1,23 @@
+#calendario {
+  margin-bottom: 15px;
+  .calendar-controls {
+    @media (max-width: 480px) {
+      text-align: center;
+    }
+    .calendar-day-controls {
+      position: relative;
+      float: left;
+    }
+    .calendar-view-controls {
+      position: relative;
+      float: right;
+    }
+    .calendar-day-controls,
+    .calendar-view-controls {
+      margin: 10px 0;
+      @media (max-width: 480px) {
+        float: none;
+      }
+    }
+  }
+}

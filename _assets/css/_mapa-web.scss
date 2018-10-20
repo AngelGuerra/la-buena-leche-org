@@ -1,0 +1,15 @@
+#mapa-web {
+  .list-group {
+    li {
+      color: #999;
+      a {
+        color: $page-font-color;
+      }
+    }
+    ul {
+      li {
+        margin: 10px 0;
+      }
+    }
+  }
+}
