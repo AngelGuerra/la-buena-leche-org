@@ -1,37 +1,37 @@
 ---
 layout: default
-title: Bienvendido
-description: Asociación La Buena Leche
-css: asociate
+title: Asóciate | La Buena Leche
+description: Nos gustaría resaltar la enorme importancia de las personas que se asocian, tanto por su apoyo económico con la cuota anual, como por la participación de algunas mujeres que se implican y colaboran activamente con nosotras
 ---
 
-{% asset 'asociate/asociate.jpg' magick:resize=1140 magick:quality=90 alt='Una persona adulta dando la mano a un niño pequeño' class='img-fluid rounded mx-auto d-block' %}
+<article>
+  <header>
+    <h1 class="text-center">
+      Asóciat<span class="end">e</span>
+    </h1>
+  </header>
 
-<h1>Asóciate</h1>
+  <section>
+    <p>
+      Podrá asociarse cualquier persona mayor de edad, que se interese por los fines de la asociación, abonando una cuota de <strong>15 euros al año</strong>.
+    </p>
 
-<p>
-  Podrá asociarse cualquier persona mayor de edad, que se interese por los fines de la asociación, abonando una cuota de <strong>15 euros al año</strong>.
-</p>
+    <p>
+      Podrás hacerte socia/o bien contactando con nosotras mediante los teléfonos, bien escribiendo a <a href="mailto:{{site.email}}"><span class="obfuscated-email" data-website="{{site.email | split: '@' | last | split: '' | reverse | join: '' }}" data-user="{{site.email | split: '@' | first | split: '' | reverse | join: '' }}"></span></a>, o bien realizando un ingreso en la siguiente cuenta corriente de que dispone la asociación: <strong>{{ site.iban }}</strong> (no olvides indicar tu nombre).
+    </p>
 
-<p>
-  Podrás hacerte socia/o bien contactando con nosotras mediante los teléfonos, bien escribiendo a <a href="mailto:{{site.email}}">{{site.email}}</a>, o bien realizando un ingreso en la siguiente cuenta corriente de que dispone la asociación: <strong>ES74 2048 2119 8634 0000 2556</strong> (no olvides indicar tu nombre).
-</p>
+    <p>
+      Todas las actividades que realiza la asociación (reuniones, conferencias, jornadas, concursos fotográficos, etc.) son sin ánimo de lucro y gratuitas. Muchas de ellas se realizan gracias a las subvenciones que nos conceden, a la cuota que abonan las socias y al trabajo desinteresado de algunas de ellas, incluido personal sanitario.
+    </p>
 
-<p>
-  Todas las actividades que realiza la asociación (reuniones, conferencias, jornadas, concursos fotográficos, etc.) son sin ánimo de lucro y gratuitas. Muchas de ellas se realizan gracias a las subvenciones que nos conceden, a la cuota que abonan las socias y al trabajo desinteresado de algunas de ellas, incluido personal sanitario.
-</p>
+    <p>
+      Nos gustaría resaltar la enorme importancia de las personas que se asocian, tanto por su apoyo económico con la cuota anual, como por la participación de algunas mujeres que se implican y colaboran activamente con nosotras, ya sea en las reuniones con madres como en los trabajos de infraestructura de la asociación.
+    </p>
 
-<p>
-  Nos gustaría resaltar la enorme importancia de las personas que se asocian, tanto por su apoyo económico con la cuota anual, como por la participación de algunas mujeres que se implican y colaboran activamente con nosotras, ya sea en las reuniones con madres como en los trabajos de infraestructura de la asociación.
-</p>
+    <p>
+      Las ventajas de estar asociada/o son las siguientes:
+    </p>
 
-<p>
-  Las ventajas de estar asociada/o son las siguientes:
-</p>
-
-<ul>
-  <li>Entrega del calendario anual</li>
-  <li>Descuentos en el alquiler de sacaleches</li>
-  <li>Disponibilidad del fondo bibliográfico y material audio-visual</li>
-  <li>Descuentos en talleres y charlas</li>
-</ul>
+    {% include partials/_associate-icons.html %}
+  </section>
+</article>

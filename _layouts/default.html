@@ -1,19 +1,46 @@
+---
+layout: compress
+---
 <!DOCTYPE html>
 <html lang="es-ES">
 	<head>
-		{% include head.html %}
+    {% include head.html %}
 	</head>
-	<body>
-        <header>
-            {% include header.html %}
-        </header>
-        <main id="{{page.css}}" class="container slide-top">
-            {{ content }}
-        </main>
-        <footer>
-            {% include footer.html %}
-        </footer>
+	<body id="{{ page.css | join: ' ' }}">
+    {% comment %}
+    <!-- <section style="position: relative;">
+      <picture>
+        <source srcset="https://fakeimg.pl/576x300/ 576w" media="(max-width:576px)">
+        <source srcset="https://fakeimg.pl/768x300/ 768w" media="(max-width:768px)">
+        <source srcset="https://fakeimg.pl/992x300/ 992w" media="(max-width:992px)">
+          <source srcset="https://fakeimg.pl/1200x300/ 1200w" media="(max-width:1200px)">
+        <img src="https://fakeimg.pl/1920x300/" alt="{{ page.img.alt }}" class="w-100 mb-3">
+      </picture>
 
-        {% include scripts.html %}
+      <h1 style="position: absolute; top: calc(50% - 0.75em); bottom: 0; left: 0; right: 0;" class="text-center">Asociación La Buena Leche</h1>
+    </section> -->
+
+
+    <!-- <picture>
+      <source srcset="{% asset encuentros/encuentros.jpg magick:resize=576 magick:quality=90 @path %} 576w" media="(max-width:576px)">
+      <source srcset="{% asset asociate/asociate.jpg magick:resize=768 magick:quality=90 @path %} 768w" media="(max-width:768px)">
+      <source srcset="{% asset home/01.jpg magick:resize=992 magick:quality=90 @path %} 992w" media="(max-width:992px)">
+      <img src="{% asset contacto/contacto.jpg magick:resize=1140 magick:quality=90 @path %}">
+    </picture> -->
+
+    <!-- <img src="{{ page.img.url }}" class="w-100 mb-3" alt="{{ page.img.alt }}"> -->
+    {% endcomment %}
+
+    <header id="main-header" class="mb-0">
+      {% include header.html %}
+    </header>
+    <main class="container my-5">
+      {{ content }}
+    </main>
+    <footer id="main-footer">
+      {% include footer.html %}
+    </footer>
+
+    {% include scripts.html %}
 	</body>
 </html>

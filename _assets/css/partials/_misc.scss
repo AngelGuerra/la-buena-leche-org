@@ -1,0 +1,146 @@
+body {
+  background: {
+    color: #fff;
+  }
+  color: $lbl-page-font-color;
+  font: {
+    family: $lbl-page-font;
+  }
+  width: 100%;
+
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
+    font: {
+      family: $lbl-title-font;
+    }
+  }
+
+  h1, .h1 {
+    margin: {
+      top: 2.5em;
+      bottom: 2.5em;
+    }
+
+    &:first-letter,
+    &::first-letter {
+      font-weight: bold;
+      color: $lbl-main-color;
+      border: {
+        top: solid 0.1em;
+        left: solid 0.1em;
+      }
+      padding: {
+        top: 0.1em;
+        left: 0.2em;
+      }
+    }
+
+    span {
+      &.end {
+        border: {
+          right: solid 0.1em;
+          bottom: solid 0.1em;
+        }
+        padding: {
+          right: 0.2em;
+          bottom: 0.1em;
+        }
+      }
+    }
+  }
+
+  h2, .h2 {
+    margin: {
+      bottom: 0.75em;
+    }
+    &:first-letter,
+    &::first-letter {
+      font-weight: bold;
+    }
+  }
+
+  main,
+  footer {
+    a {
+      color: inherit;
+      font-weight: bold;
+      text-decoration: underline;
+
+      &:hover {
+        color: $lbl-main-color;
+      }
+    }
+  }
+
+  .parallax {
+    position: relative;
+    // height: 20em;
+    background: {
+      attachment: fixed;
+      position: center;
+      repeat: no-repeat;
+      size: cover;
+    }
+
+    h1 {
+      top: calc(50% - 0.75em);
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: #fff;
+    }
+  }
+
+  .obfuscated-email {
+    &::before {
+      content: attr(data-website) "\0040" attr(data-user);
+      unicode-bidi: bidi-override;
+      direction: rtl;
+    }
+  }
+
+  .obfuscated-phone {
+    &::before {
+      content: attr(data-phone);
+      unicode-bidi: bidi-override;
+      direction: rtl;
+    }
+  }
+
+  .assoc-icon-link {
+    color: #333;
+    transition: box-shadow 0.3s ease-in-out;
+    font-weight: normal;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    }
+
+    .assoc-icon {
+      border-radius: 50%;
+      background-color: $lbl-main-color;
+
+      &.fa-calendar-alt {
+        padding: .4375em .5em;
+      }
+
+      &.fa-tint {
+        padding: .4375em .6em;
+      }
+
+      &.fa-swatchbook {
+        padding: .4375em;
+      }
+
+      &.fa-comments {
+        padding: .4375em .38em;
+      }
+    }
+  }
+}

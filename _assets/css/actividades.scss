@@ -1,0 +1,33 @@
+#actividades {
+  .blockquote {
+    font-size: 1em;
+  }
+
+  #collapseMottos {
+    > .row {
+      border: {
+        bottom: solid 1px rgba(0, 0, 0, .125);
+      }
+      margin: {
+        bottom: 1rem;
+      }
+
+      @media screen and (max-width: 768px) {
+        border: {
+          bottom: none;
+        }
+        margin: {
+          bottom: 0;
+        }
+      }
+
+      > div {
+        @media screen and (max-width: 768px) {
+          border: {
+            bottom: solid 1px rgba(0, 0, 0, .125);
+          }
+        }
+      }
+    }
+  }
+}

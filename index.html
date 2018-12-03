@@ -1,40 +1,102 @@
 ---
-layout: default
-title: Bienvendido
-description: Asociación La Buena Leche
-css: home
+layout: home
+title: Asociación La Buena Leche
+description: Nuestra Asociación quiere colaborar en la formación de futuras madres, intentando que la lactancia natural les sea más familiar, además de informar y orientar a cualquier persona interesada en las ventajas que ésta supone.
+css:
+  - home
+js:
+  - jquery.rss
+  - home
 ---
 
-<div id="carousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            {% asset 'home/01.jpg' magick:resize=1140 magick:quality=90 alt='Un niño en brazos de su madre señalando a la cámara' class='w-100 d-block' %}
-        </div>
-        <div class="carousel-item">
-            {% asset 'home/02.jpg' magick:resize=1140 magick:quality=90 alt='Una niña rodeando con el brazo a un niño' class='w-100 d-block' %}
-        </div>
+<article>
+  <header>
+    <h1 class="text-center">
+      Asociación La Buena Lech<span class="end">e</span>
+    </h1>
+  </header>
+
+  <!-- Bienvenida -->
+
+  <section id="welcome" class="parallax text-white my-5 d-flex flex-column justify-content-center">
+    <header class="text-center">
+      <h2>Bienvenid@</h2>
+    </header>
+    <div class="container">
+      <p>
+        Esperamos que aquí puedas encontrar la información que precises y te sea de utilidad. Hoy en día tenemos al alcance más y mejores libros y artículos sobre lactancia materna pero a veces cuesta encontrar la información más práctica, la que nos ayuda en este momento concreto, la que nos puede poner en contacto con alguien, con una voz humana que nos calme o con una visita que nos tranquilice sobre qué hacer con nuestra pequeña criatura.
+      </p>
+
+      <p>
+        Deseamos que esta página sea una mano amiga donde puedas encontrar la información más básica y necesaria para la lactancia de tu bebé y también donde puedas encontrar <a href="/contacta-con-nosotras" title="Contacta con nosotras">un número de teléfono o dirección electrónica</a> para consultar dudas, un lugar donde poder <a href="/encuentros" title="Nuestros encuentros">reunirte con otras madres</a> que amamantan y donde poder poner en voz alta tus preocupaciones, miedos, angustias o alegrías.
+      </p>
     </div>
-    <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Anterior</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Siguiente</span>
-    </a>
-</div>
+  </section>
 
-<h1>Asociación La Buena Leche</h1>
+  <!-- Asóciate -->
+  <section class="container text-center my-5 d-flex flex-column justify-content-center">
+    {% assign current = site.mottos | where: "year", 2018 | first %}
+    <header>
+      <h2>Asóciate</h2>
+    </header>
 
-<p>
-  <span class="font-weight-bold">Bienvenida/o a nuestra página web.</span> Esperamos que aquí puedas encontrar la información que precises y te sea de utilidad. Hoy en día tenemos al alcance más y mejores libros y artículos sobre lactancia materna pero a veces cuesta encontrar la información más práctica, la que nos ayuda en este momento concreto, la que nos puede poner en contacto con alguien, con una voz humana que nos calme o con una visita que nos tranquilice sobre qué hacer con nuestra pequeña criatura.
-</p>
+    <h3 class="mb-3">{{ current.title }}</h3>
 
-<p>
-  Deseamos que esta página sea una mano amiga donde puedas encontrar la información más básica y necesaria para la lactancia de tu bebé y también donde puedas encontrar un nº de teléfono o dirección electrónica para consultar dudas, un lugar donde poder reunirte con otras madres que amamantan y donde poder poner en voz alta tus preocupaciones, miedos, angustias o alegrías.
-</p>
+    {% include partials/_associate-icons.html %}
+  </section>
 
-<p class="text-uppercase">
-  <strong>La Buena Leche</strong>
-</p>
+  <!-- Opiniones -->
+  <section id="quotes" class="parallax text-white my-5 py-5 d-flex flex-column justify-content-center">
+    <header class="text-center">
+      <h2>Qué dicen nuestras socias</h2>
+    </header>
 
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-10 offset-lg-1">
+          <div id="blockquotes-carousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+              {% for blockquote in site.blockquotes %}
+                {% if forloop.first == true %}
+                  <div class="carousel-item pb-4 active">
+                {% else %}
+                  <div class="carousel-item pb-4">
+                {% endif %}
+                  <!-- <div class="media">
+                    <img class="align-self-center mr-3 rounded-circle" src="{{ blockquote.avatar }}" alt="Fotografía de {{ blockquote.name }}">
+                    <div class="media-body"> -->
+                      <blockquote class="blockquote text-center">
+                        <p class="mb-0">{{ blockquote.quote }}</p>
+                        <footer class="blockquote-footer">{{ blockquote.name }}</footer>
+                      </blockquote>
+                    <!-- </div>
+                  </div> -->
+                </div>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="my-5 container d-flex flex-column justify-content-center">
+    <header class="text-center">
+      <h2>Nuestro blog</h2>
+    </header>
+
+    <div id="entries">
+      <div id="loader">
+        <div class="spinner">
+          <div class="spinner">
+              <div class="spinner">
+                  <div class="spinner">
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>

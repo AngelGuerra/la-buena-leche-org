@@ -1,0 +1,267 @@
+# Welcome to Jekyll!
+title: Asociación La Buena Leche
+email: mail@example.org
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://labuenaleche.org" # the base hostname & protocol for your site, e.g. http://example.com
+iban: ESXX XXXX XXXX XXXX XXXX XXXX
+
+# Social network and other links
+social:
+  twitter: asociacionlbl
+  facebook: AsociacionLaBuenaLeche
+  blog: //compartiendocrianza.blogspot.com.es
+
+markdown: kramdown
+plugins:
+  - jekyll-assets
+  - jekyll-sitemap
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# Custom
+
+mottos:
+  - year: 1992
+    title: Iniciativa Hospital Amigo del Niño
+  - year: 1993
+    title: Iniciativas Lugares de Trabajo Amigos de la Madre
+  - year: 1994
+    title: 'Lactancia Materna: Trabajando para implementar el Código de la OMS'
+  - year: 1995
+    title: 'Lactancia Materna: la Fuerza de la Mujer'
+  - year: 1996
+    title: 'Lactancia Materna: Una Responsabilidad Comunitaria'
+  - year: 1997
+    title: 'Lactancia Materna: Un Recurso Natural'
+  - year: 1998
+    title: 'Lactancia Materna: La Mejor Inversión'
+  - year: 1999
+    title: 'Lactancia Materna: Educación para la Vida'
+  - year: 2000
+    title: 'Lactancia Materna: Un Derecho de todas las Mujeres'
+  - year: 2001
+    title: La Lactancia Materna en la Era de la Información
+  - year: 2002
+    title: 'Lactancia Materna: Salud para las Mujeres y sus Hijos'
+  - year: 2003
+    title: La Lactancia Materna en la Era de la Globalización
+  - year: 2004
+    title: 'Lactancia Materna Exclusiva los 6 primeros meses: Segura, Saludable y Sostenible'
+  - year: 2005
+    title: Lactancia materna y alimentación complementaria
+  - year: 2006
+    title: 'Código de la OMS: 25 años vigilando la lactancia materna'
+  - year: 2007
+    title: 'Lactancia Materna: La primera hora es importante'
+  - year: 2008
+    title: El apoyo a las madres facilita el éxito de la lactancia materna
+  - year: 2009
+    title: Lactancia materna cuando se produce una urgencia. ¿Estamos preparados?
+  - year: 2010
+    title: Paso a paso hacia una atención humana del nacimiento y la lactancia
+  - year: 2011
+    title: 'Lactancia Materna: una experiencia 3D'
+  - year: 2012
+    title: Comprendiendo el Pasado - Planificando el Futuro
+  - year: 2013
+    title: 'Apoyo a las madres que amamantan: ¡Cercano, continuo y oportuno!'
+  - year: 2014
+    title: 'Lactancia Materna: ¡Un triunfo para toda la vida!'
+  - year: 2015
+    title: Amamantar y Trabajar, ¡logremos que sea posible!
+  - year: 2016
+    title: 'Lactancia Materna: Clave para el Desarrollo Sostenible'
+  - year: 2017
+    title: Apoyar la Lactancia Materna, Juntos
+  - year: 2018
+    title: 'Lactancia Materna: Pilar de vida'
+
+blockquotes:
+  - name: Jane Doe
+    quote: La libertad es el gran espejo mágico donde toda la creación pura y cristalina se refleja; en ella se abisman los espíritus tiernos y las formas de la naturaleza entera.
+    avatar: https://randomuser.me/api/portraits/women/68.jpg
+  - name: Jane Smith
+    quote: No se nos otorgará la libertad externa más que en la medida exacta en que hayamos sabido, en un momento determinado, desarrollar nuestra libertad interna.
+    avatar: https://randomuser.me/api/portraits/women/34.jpg
+  - name: John Doe
+    quote: Nadie combate la libertad; a lo sumo combate la libertad de los demás. La libertad ha existido siempre, pero unas veces como privilegio de algunos, otras veces como derecho de todos.
+    avatar: https://randomuser.me/api/portraits/men/34.jpg
+  - name: John Smith
+    quote: Mucha gente no puede ni emanciparse, es decir, no puede ni darse cuenta de la esclavitud en que le mantiene las ideas en medio de las cuales se ha educado.
+    avatar: https://randomuser.me/api/portraits/men/28.jpg
+
+contacts:
+  - phone: '942000000'
+    label: 942 00 00 00
+    name: Jane Doe
+    whatsapp: false
+    help: null
+    icon: fa fa-phone
+  - phone: '675000000'
+    label: 675 00 00 00
+    name: Jane Smith
+    whatsapp: false
+    help: null
+    icon: fa fa-phone
+  - phone: '680000000'
+    label: 680 00 00 00
+    name: John Doe
+    whatsapp: false
+    help: Lorem ipsum
+    icon: fa fa-phone
+  - phone: '605000000'
+    label: 605 00 00 00
+    name: Vero
+    whatsapp: true
+    help: 'WhatsApp'
+    icon: fab fa-whatsapp
+
+meetings:
+  - location: Solares
+    location_help: null
+    place: Centro Cultural Ramón Pelayo
+    street: null
+    street_help: null
+    day: Primeros lunes de mes
+    start: '17:30'
+    end: '19:00'
+    order: 1
+    maps: '//www.google.es/maps/place/Centro+Cultural+Ram%C3%B3n+Pelayo/@43.3841445,-3.73203,17z/data=!4m2!3m1!1s0xd4ecb27f10ca01f:0x46be1d6b4071bd95'
+  - location: Castro Urdiales
+    location_help: null
+    place: C.E.I.P. San Martín de Campijo
+    street: C/ de Aranzal, 11
+    street_help: null
+    day: Primeros miércoles de mes
+    start: '17:30'
+    end: '19:30'
+    order: 2
+    maps: '//www.google.es/maps/place/Colegio+Campijo/@43.38357,-3.2239874,207m/data=!3m2!1e3!4b1!4m2!3m1!1s0xd4ef24971b62d4b:0xde941f67b47452f7!6m1!1e1'
+  - location: Tanos
+    location_help: Zona de Torrelavega
+    place: Centro Cultural frente al Centro de Salud
+    street: Avda. de Joaquín Fernández Vallejo, 123
+    street_help: null
+    day: Segundos martes de mes
+    start: '17:00'
+    end: '19:00'
+    order: 3
+    maps: '//www.google.es/maps/place/Avineda+de+Joaquin+Fernandez+Vallejo,+123,+39300+Torrelavega,+Cantabria/@43.3313727,-4.0435936,210m/data=!3m1!1e3!4m5!3m4!1s0xd493dd94477cc27:0xbd755e4436ee261c!8m2!3d43.3313727!4d-4.0430451'
+  - location: Santander
+    location_help: null
+    place: Centro Cívico Callealtero
+    street: Plaza Derechos Humanos, 1
+    street_help: Zona Calle Alta
+    day: Terceros martes de mes
+    start: '17:00'
+    end: '19:00'
+    order: 4
+    maps: '//www.google.es/maps/place/Plaza+los+Derechos+Humanos,+1,+39008+Santander,+Cantabria/@43.45852,-3.81782,17z/data=!3m1!4b1!4m2!3m1!1s0xd494a2cd27e3409:0xef8977d24106b03a'
+  - location: Puente San Miguel
+    location_help: Zona de Reocín
+    place: Casa de la Cultura
+    street: Bº La Robleda, 100
+    street_help: null
+    day: Últimos viernes de mes
+    start: '17:00'
+    end: '19:00'
+    order: 5
+    maps: '//www.google.es/maps/place/Casa+de+Cultura/@43.3606006,-4.0849641,15z/data=!4m5!1m2!2m1!1sCasa+de+Cultura!3m1!1s0x0000000000000000:0xa16a2b31eb16707d'
+
+material:
+  videos:
+    - La vida fetal, el Nacimiento y la Salud (DVD Dr. Michel Odent)
+    - 'Amamantar: Salud y Placer (REGAZO, Grupo de Apoyo a la Lactancia Materna de Jerez)'
+    - Buena leche, lactancia y vida (Producido por la Consejería de Sanidad del Gobierno de Cantabria y la Asociación "La Buena Leche")
+  documentaries:
+    - Lactancia y Vida (La Buena Leche 2007)
+    - El pecho no tiene horario (Dra. Gro Nylander)
+    - La postura biológica para amamantar (Suzanne Colson, 2011)
+    - Método Madre Canguro (Nils Bergman)
+    - 'Amamantar: salud y placer (Grupo Regazo)'
+    - Lactancia materna... en gotas (Unicef y Ppado de Asturias, 2001)
+    - Un feliz acontecimiento (Largometraje de Rémi Bezançon, 2011)
+    - La vida fetal, el nacimiento y la salud (Dr. Michel Odent)
+    - Tus primeros pasos con mamá
+    - Bebés (Thomas Balmes, 2010)
+  samples:
+    - Bandoleras
+    - Copas de extractores
+    - Pezoneras
+    - Protectores
+    - Relactadores
+  books:
+    - 2º Congreso Español de lactancia
+    - 3º Congreso Español de lactancia materna 2004
+    - 4º Congreso Español de lactancia materna 2006
+    - Amas de cría (José Manuel Fraile)
+    - Bebés y cachorros
+    - Bésame mucho (Carlos González)
+    - Comidas sanas niños sanos (Ester Martín)
+    - Cuerpo de mujer, sabiduría de mujer (Christiane Narthrup)
+    - Cómo despertar la inteligencia de su bebe (Susan Ludington-Hoe)
+    - Damas ilustres y mujeres dignas (Gobierno de Cantabria)
+    - Dar el pecho es lo mejor (Gabriel Zeis)
+    - Dormir sin lágrimas (Rosa Jové)
+    - El bebé es un mamífero (Michel Odent)
+    - El concepto del continuo (Jean Liddloff)
+    - El cuento de las cuatro esquinitas
+    - El granjero y el obstetra (Michel Odent)
+    - El manifiesto educativo (Iñigo Florez)
+    - El nacimiento de la era del plástico (Dr. Michel Odent)
+    - El niño feliz (Dorothy Corkille)
+    - El nuevo libro del embarazo y el nacimiento (Miriam Stoppard)
+    - El periné femenino y el parto (Blandine Calais)
+    - El quehacer de cada tarde (Antonio Garrido)
+    - Embarazo y nacimiento teutónico (Frida Kaplan)
+    - La cientificación del amor (Michel Oden)
+    - La cuna vacía, el doloroso proceso de perder un embarazo (Mª Angeles Claramunt, Mónica Álvarez, Rosa Jové y Emilio Santos)
+    - La identificación de recién nacidos en la Casa Real Española (Antonio Garrido)
+    - La maternidad y el encuentro con tu propia sombra (Laura Gutman)
+    - La rebelión de Edipo 2ª parte (Casilda Rodrigañez)
+    - La represión y el deseo materno (Casilda Rodrigañez)
+    - La revolución del nacimiento (Isabel Fernández del Castillo)
+    - Lactancia materna (Jan Britten)
+    - Lactancia materna (Mª José Aguilar)
+    - Lactancia materna guía para profesionales. Ed.2004
+    - 'Lactancia materna: un reto personal (Descargar en PDF)'
+    - Lacto graphies (Ermengol)
+    - Las cinco heridas que impiden ser uno mismo (Lise Bourbeau)
+    - Lo que hacen las madres
+    - Los buenos tratos a la infancia (Gedisa)
+    - Luna roja (Miranda Gray)
+    - Manual de lactancia materna Ed.2008
+    - Manual práctico de lactancia materna (Carlos González)
+    - Maternidad y ciclo vital de la mujer (Universidad de Zaragoza)
+    - Maternidad y ecología (Universidad de Zaragoza)
+    - Maternidad y parto. Nuestras ancestras y nosotras (Ana Mateo)
+    - Maternidad y paternidad (Universidad de Zaragoza)
+    - Mi bebé lo entiende todo (Aletha J.Solter)
+    - Mi niño no me come (Carlos González)
+    - Mujeres que corren con los lobos (Clarissa Pinkola)
+    - Nacer por cesárea (Ibone Olza)
+    - Nacimiento renacido (Michel Odent)
+    - Nuestros hijos y nosotras (Meredith F. Small)
+    - Padres liberados, hijos liberados
+    - Pariremos con placer (Casilda Rodrigañez)
+    - Parto seguro (Beatriz Smulders)
+    - Pequeñas delicias (Mª ángeles Claramunt)
+    - Primero auxilios (SM)
+    - Puerperios y otras exploraciones del alma femenina (Laura Gutman)
+    - Shantala (Frederick Leboyer)
+    - Sobre nosotras mujeres de Cantabria
+    - Un año para toda la vida (Mariela Michelena)
+    - Un regalo para toda la vida (Carlos González)
+    - Vida Clandestina (A. Delgado)
+    - Violencias invisibles y adicciones (Laura Gutman)
+    - ¿Por qué lloras? (José Mª Cubells)
