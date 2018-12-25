@@ -3,6 +3,7 @@ title: Asociación La Buena Leche
 email: mail@example.org
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://labuenaleche.org" # the base hostname & protocol for your site, e.g. http://example.com
+gtag: UA-XXXXXXXX-X
 iban: ESXX XXXX XXXX XXXX XXXX XXXX
 
 # Social network and other links
