@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Bienvendido
-description: Asociación La Buena Leche
+title: Sobre la asociación
+description: Queremos colaborar con las madres e intentar que la lactancia natural les sea más familiar, además de informar y orientar a cualquier persona interesada en las ventajas que ésta supone
 ---
 
 <article>
@@ -28,7 +28,12 @@ description: Asociación La Buena Leche
       La lactancia materna no solo es lo mejor para el recién nacido sino que también es beneficiosa para la madre y para la sociedad.
     </p>
 
-    <img src="https://fakeimg.pl/1920x1080/" class="img-fluid my-3">
+    <picture>
+      <source srcset="{% asset quienes-somos/01.jpg magick:resize=576 magick:quality=90 @path %} 576w" media="(max-width:576px)">
+      <source srcset="{% asset quienes-somos/01.jpg magick:resize=768 magick:quality=90 @path %} 768w" media="(max-width:768px)">
+      <source srcset="{% asset quienes-somos/01.jpg magick:resize=992 magick:quality=90 @path %} 992w" media="(max-width:992px)">
+      <img src="{% asset quienes-somos/01.jpg magick:resize=1140 magick:quality=90 @path %}" class="img-fluid my-3 rounded">
+    </picture>
 
     <p>
       Actualmente ningún profesional duda de que la leche materna sea el mejor alimento para el bebé. La OMS recomienda la lactancia materna exclusiva durante por lo menos los primeros 6 meses de vida y después junto con otros alimentos hasta al menos los 2 ó 3 años. Esto quiere decir que durante los primeros 6 meses no hace falta darle nada más a nuestro/a pequeño/a, ni siquiera agua o zumos. A partir de esa edad se pueden ir añadiendo alimentos poco a poco (para detectar posibles alergias) y se puede continuar amamantando mientras el/la hijo/a y la madre quieran. En nuestra sociedad ya no es frecuente ver a un niño de pocos años mamando pero eso no quiere decir que sea una práctica mala, todo lo contrario, puede ser un aporte nutricional, inmunológico y emocional verdaderamente importante.

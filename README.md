@@ -15,6 +15,11 @@ https://www.labuenaleche.org/
 
 ## Arrancar la versión de desarrollo
 
+- Clonar el proyecto
+- Entrar a la carpeta y ejecutar `bundle install`
+- Copiar el `_config.default.yml` a `_config.yml`.
+- Arrancar la versión de desarrollo.
+
 Con este comando habilitamos el servidor en nuestra red local, sólo necesitamos saber la IP:
 
 `JEKYLL_ENV=development jekyll serve --host=0.0.0.0`

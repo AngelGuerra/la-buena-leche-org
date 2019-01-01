@@ -42,7 +42,7 @@ $(function() {
         // a callback, which gets triggered once data was received but before the rendering.
         // this can be useful when you need to remove a spinner or something similar
         onData: function () {
-          $('#loader').remove();
+          $('#entries').find('.loader').remove();
         }
       },
 
@@ -60,4 +60,45 @@ $(function() {
       }
     );
   }
+
+  var template = "<div class=\"row pt-3 pb-2 border-bottom\">\
+  <div class=\"col-12 col-lg-3 col-xl-2\"><p class=\"h5 text-muted\">MONTH DAY</p></div>\
+  <div class=\"col-12 col-lg-3 col-xl-2\"><p class=\"h5 text-muted\">START &ndash; END</p></div>\
+  <div class=\"col-12 col-lg-6 col-xl-8\"><p class=\"h5 text-right\">LOCATION &ndash; PLACE</p></div>\
+  </div>";
+  var meetings = $.ajax('/sources/meetings/2019.json');
+  $.when(meetings).then(function(data, textStatus, jqXHR) {
+    if (jqXHR.status === 200) {
+      var all  = [],
+          next = [],
+          html = [];
+
+      $.each(data, function(i, meeting) {
+        $.each(meeting.dates, function(i, date) {
+          all.push(date);
+        });
+      });
+      all.sort();
+      next = all.slice(0, 5);
+
+      $.each(next, function(i, date) {
+        $.each(data, function(i, meeting) {
+          if ($.inArray(date, meeting.dates) !== -1) {
+            var item;
+            item = template.replace('MONTH', moment(date).format('MMMM'));
+            item = item.replace('DAY', moment(date).format('DD'));
+            item = item.replace('START', meeting.start);
+            item = item.replace('END', meeting.end);
+            item = item.replace('LOCATION', meeting.location);
+            item = item.replace('PLACE', meeting.place);
+            html.push(item);
+            return;
+          }
+        });
+      });
+
+      $('#meetings').find('.loader').remove();
+      $("#meetings").append(html.join("\n"));
+    }
+  });
 });
