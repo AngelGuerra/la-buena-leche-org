@@ -1,5 +1,5 @@
-{% assign contacts = site.contacts | sort: "name" %}
-{% assign meetings = site.meetings | sort: "order" %}
+{% assign contacts = site.data.contacts | sort: "name" %}
+{% assign meetings = site.data.meetings | sort: "order" %}
 
 <div class="container mt-3 mb-5">
   <div class="row">
@@ -45,6 +45,10 @@
         </li>
         <li>
           <span class="fa-li"><i class="fa fa-rss"></i></span> <a href="{{site.social.blog}}" target="_blank" rel="me">Nuestro blog <i class="fas fa-external-link-alt"></i>
+          </a>
+        </li>
+        <li>
+          <span class="fa-li"><i class="fab fa-instagram"></i></span> <a href="//www.instagram.com/{{site.social.instagram}}" target="_blank" rel="me">Instagram <i class="fas fa-external-link-alt"></i>
           </a>
         </li>
       </ul>

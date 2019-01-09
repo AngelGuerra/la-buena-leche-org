@@ -11,7 +11,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.8.3"
+gem "jekyll", "~> 3.8.5"
 
 # https://github.com/envygeeks/jekyll-assets#imagemagick
 gem "mini_magick"

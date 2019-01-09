@@ -5,7 +5,7 @@ description: En la Asociación no contamos con una ubicación física pero puede
 css:
   - contacto
 ---
-{% assign contacts  = site.contacts | sort: "name" %}
+{% assign contacts  = site.data.contacts | sort: "name" %}
 
 <article>
   <header>
@@ -48,6 +48,12 @@ css:
           <h5 class="mb-1"><i class="fab fa-facebook"></i> Facebook</h5>
         </div>
         <p class="mb-1">La Buena Leche</p>
+      </a>
+      <a href="//www.instagram.com/{{site.social.instagram}}" class="list-group-item list-group-item-action flex-column align-items-start" target="_blank" title="Página de Facebook">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1"><i class="fab fa-instagram"></i> Instagram</h5>
+        </div>
+        <p class="mb-1">La Buena Leche Asociación</p>
       </a>
       <a href="//twitter.com/{{site.social.twitter}}" class="list-group-item list-group-item-action flex-column align-items-start" target="_blank" title="Twitter">
         <div class="d-flex w-100 justify-content-between">

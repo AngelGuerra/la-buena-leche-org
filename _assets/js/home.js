@@ -78,6 +78,12 @@ $(function() {
           all.push(date);
         });
       });
+
+      all = $.grep(all, function(date) {
+        var today = new Date().setHours(0, 0, 0);
+        return today <= new Date(date);
+      });
+
       all.sort();
       next = all.slice(0, 5);
 

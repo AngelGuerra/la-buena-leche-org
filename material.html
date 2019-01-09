@@ -32,7 +32,7 @@ description: En la asociación ponemos a tu disposición distintos elementos que
         <h2>Material de muestra</h2>
 
         <ul class="fa-ul">
-          {% for item in site.material.samples %}
+          {% for item in site.data.materials['samples'] %}
             <li><span class="fa-li"><i class="fa fa-check"></i></span> {{ item }}</li>
           {% endfor %}
         </ul>
@@ -42,7 +42,7 @@ description: En la asociación ponemos a tu disposición distintos elementos que
         <h2>Material audiovisual</h2>
 
         <ul class="fa-ul">
-          {% for item in site.material.videos %}
+          {% for item in site.data.materials['videos'] %}
             <li><span class="fa-li"><i class="fa fa-video"></i></span> {{ item }}</li>
           {% endfor %}
         </ul>
@@ -53,7 +53,7 @@ description: En la asociación ponemos a tu disposición distintos elementos que
 
         <p>Ofrecidos como actividad puntual junto a coloquio:</p>
         <ul class="fa-ul">
-          {% for item in site.material.documentaries %}
+          {% for item in site.data.materials['documentaries'] %}
             <li><span class="fa-li"><i class="fa fa-film"></i></span> {{ item }}</li>
           {% endfor %}
         </ul>
@@ -72,7 +72,7 @@ description: En la asociación ponemos a tu disposición distintos elementos que
     </p>
 
     <ul class="fa-ul">
-      {% for item in site.material.books %}
+      {% for item in site.data.materials['books'] %}
         <li><span class="fa-li"><i class="fa fa-book"></i></span> {{ item }}</li>
       {% endfor %}
     </ul>

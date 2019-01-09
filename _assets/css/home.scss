@@ -23,6 +23,7 @@
   article {
     > section {
       min-height: 30em;
+      padding: 2em 0;
     }
   }
 
@@ -55,6 +56,15 @@
     }
     @media (max-width: 1200px) {
       background-image: asset_url("home/quotes.jpg magick:resize=1200 magick:quality=90");
+    }
+
+    blockquote {
+      footer {
+        color: inherit;
+        font: {
+          weight: bold;
+        }
+      }
     }
   }
 

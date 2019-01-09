@@ -3,7 +3,7 @@ layout: default
 title: Ven a nuestros encuentros
 description: Queremos crear una red de apoyo de madre a madre, por medio de encuentros periódicos a los que puede asistir toda persona del entorno de la mujer lactante
 ---
-{% assign meetings = site.meetings | sort: "order" %}
+{% assign meetings = site.data.meetings | sort: "order" %}
 
 <article>
   <header>

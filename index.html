@@ -35,7 +35,7 @@ js:
 
   <!-- Asóciate -->
   <section class="container text-center my-5 d-flex flex-column justify-content-center">
-    {% assign current = site.mottos | where: "year", 2018 | first %}
+    {% assign current = site.data.mottos | where: "year", 2018 | first %}
     <header>
       <h2>Asóciate</h2>
     </header>
@@ -56,7 +56,7 @@ js:
         <div class="col-12 col-lg-10 offset-lg-1">
           <div id="blockquotes-carousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
-              {% for blockquote in site.blockquotes %}
+              {% for blockquote in site.data.blockquotes %}
                 {% if forloop.first == true %}
                   <div class="carousel-item pb-4 active">
                 {% else %}
