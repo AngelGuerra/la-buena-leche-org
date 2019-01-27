@@ -53,8 +53,7 @@ $(function() {
         $elements.each(function(index) {
           var $this = $(this);
           if ($this.attr('src') === '') {
-            // TODO: Poner imagen por defecto
-            $this.remove();
+            $this.attr('src', '/static/img/bebe.png');
           }
         });
       }
