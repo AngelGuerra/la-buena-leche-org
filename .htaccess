@@ -13,7 +13,30 @@ RewriteEngine on
 # RewriteRule .* / [L,R=302]
 
 # Sección de contacto
-# Redirect 301 /contacto /contacto
+Redirect 301 /actividades/divulgativas /actividades
+Redirect 301 /actividades/ludicas /actividades
+Redirect 301 /actividades/calendario /encuentros
+Redirect 301 /actividades/charla-taller-introduccion-a-la-disciplina-positiva /encuentros
+Redirect 301 /actividades/semana-mundial-lactancia-materna-2016 /actividades
+Redirect 301 /actividades/semana-mundial-lactancia-materna-2017 /actividades
+Redirect 301 /actividades/semana-mundial-lactancia-materna-2018 /actividades
+Redirect 301 /material/extractores-de-leche /material
+Redirect 301 /material/prestamo-de-libros /material
+Redirect 301 /material/material-divulgativo /material
+Redirect 301 /material/material-de-muestra /material
+Redirect 301 /informacion/como-empezar /lactancia/como-empezar
+Redirect 301 /informacion/beneficios-de-la-lactancia /lactancia/beneficios
+Redirect 301 /informacion/problemas-y-soluciones /lactancia/problemas-y-soluciones
+Redirect 301 /informacion/extraccion-de-leche /lactancia/extraccion-de-leche
+Redirect 301 /informacion/destete /lactancia/destete
+Redirect 301 /informacion/lactancia-y-trabajo /lactancia/derechos-trabajo
+Redirect 301 /informacion/grupos-de-apoyo /lactancia/grupos-de-apoyo
+Redirect 301 /informacion/otros-enlaces /lactancia/otros-enlaces
+Redirect 301 /contacta /contacto
+Redirect 301 /mapa-web /
+Redirect 301 /contacta /contacto
+
+ErrorDocument 404 /404
 
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/text text/html text/plain text/xml text/css application/x-javascript application/javascript text/javascript

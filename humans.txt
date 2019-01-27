@@ -1,0 +1,33 @@
+---
+layout: null
+encoding: utf-8
+---
+/* TEAM */
+
+  Ángel Guerra <developer>
+  Github: https://github.com/AngelGuerra
+  Location: Santander, Cantabria, España.
+
+/* THANKS */
+
+  Name: Luna López
+  Site: https://www.regazofotografia.com/
+  Email: info [at] regazofotografia [dot] com
+  From: Santander, Cantabria, Spain
+
+  Name: Hada López
+  Site: https://www.regazofotografia.com/
+  Email: info [at] regazofotografia [dot] com
+  From: Santander, Cantabria, Spain
+
+  Name: My little son
+
+/* SITE */
+
+  Last update: {{ site.time }}
+  Doctype: HTML5
+  Language: Spanish
+  Components: Bootstrap v4.x, jQuery v3.x, Pixabay (foto del pie de página https://pixabay.com/photo-827169/)
+  Software: Jekyll
+  IDE: Visual Studio Code
+  Github: https://github.com/AngelGuerra/la-buena-leche-org
