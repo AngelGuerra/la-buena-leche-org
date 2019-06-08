@@ -1,10 +1,10 @@
 # Welcome to Jekyll!
 title: Asociación La Buena Leche
-email: mail@example.org
+email: labuenalecheasociacion@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://labuenaleche.org" # the base hostname & protocol for your site, e.g. http://example.com
-gtag: UA-XXXXXXXX-X
-iban: ESXX XXXX XXXX XXXX XXXX XXXX
+gtag: UA-66444400-1
+iban: ES74 2048 2119 8634 0000 2556
 
 # Social network and other links
 social:
@@ -16,6 +16,19 @@ markdown: kramdown
 plugins:
   - jekyll-assets
   - jekyll-sitemap
+
+assets:
+  plugins:
+    css: { autoprefixer: {} }
+  autoprefixer:
+    browsers:
+    - "last 2 versions"
+    - "IE > 9"
+
+notice:
+  type: info
+  content: >
+    Cambio temporal <a href="https://compartiendocrianza.blogspot.com/2019/06/cambio-de-lugar-del-encuentro-de-tanos.html" class="alert-link">en la ubicación <i class="fas fa-external-link-alt"></i></a> del encuentro de Tanos
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

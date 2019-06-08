@@ -24,7 +24,7 @@ $(function() {
         <img class=\"card-img-top\" src=\"{teaserImageUrl}\" alt=\"{title}\">\
         <div class=\"card-header\"><p>{title}</p><small>{date}</small></div>\
         <div class=\"card-body\">\
-        <p class=\"card-text\">{shortBodyPlain}... <a href=\"{url}\" target=\"_blank\" rel=\"me\">seguir leyendo <i class=\"fas fa-external-link-alt\"></i></a></p>\
+        <p class=\"card-text\">{shortBodyPlain}... <a href=\"{url}\" rel=\"me\">seguir leyendo <i class=\"fas fa-external-link-alt\"></i></a></p>\
         </div>\
         </div>\
         </div>",

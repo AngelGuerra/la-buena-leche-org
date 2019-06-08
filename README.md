@@ -25,3 +25,16 @@ Con este comando habilitamos el servidor en nuestra red local, sólo necesitamos
 `JEKYLL_ENV=development jekyll serve --host=0.0.0.0`
 
 Ahora puedes acceder desde tu ordenador a `localhost:4000` o bien desde otro aparato en la misma red especificando la IP `192.168.X.XXX:4000`
+
+## Docker
+
+También podemos utilizar Docker para el desarrollo:
+
+```bash
+# Anfitrión
+sudo docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" -p 4000:4000 -it jekyll/jekyll:latest bash
+# Docker
+bundle install
+JEKYLL_ENV=development jekyll serve --host 0.0.0.0
+# Ahora puedes ver en http://{DOCKERIP}:4000 o http://127.0.0.1:4000 la página
+```

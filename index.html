@@ -9,6 +9,14 @@ js:
   - home
 ---
 
+{% if site.notice %}
+<div class="container">
+  <div class="alert alert-{{ site.notice.type }}" role="alert">
+    {{ site.notice.content }}
+  </div>
+</div>
+{% endif %}
+
 <article>
   <header>
     <h1 class="text-center">
@@ -17,7 +25,6 @@ js:
   </header>
 
   <!-- Bienvenida -->
-
   <section id="welcome" class="parallax text-white my-5 d-flex flex-column justify-content-center">
     <header class="text-center">
       <h2>Bienvenid@</h2>

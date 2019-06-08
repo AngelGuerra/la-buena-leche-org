@@ -10,12 +10,24 @@ gem "jekyll", "~> 3.8.5"
 gem "mini_magick"
 
 # https://github.com/gjtorikian/html-proofer
-gem 'html-proofer'
+gem "html-proofer"
+
+# A make-like build utility for Ruby
+gem "rake"
+
+# JavaScript parser, minifier, compressor and beautifier toolkit.
+gem "uglifier"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+  # Asset pipelines for Jekyll
   gem "jekyll-assets"
+
+  # Jekyll plugin to silently generate a sitemaps.org compliant sitemap for your Jekyll site
   gem "jekyll-sitemap"
+
+  # CSS Auto-Prefixing, as suggested by jekyll-assets
+  gem "autoprefixer-rails"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

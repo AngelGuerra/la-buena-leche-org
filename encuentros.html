@@ -40,9 +40,10 @@ description: Queremos crear una red de apoyo de madre a madre, por medio de encu
           {% for meeting in meetings %}
             <li class="list-group-item">
               <address>
-                <a href="{{ meeting.maps }}" class="arrow-maps" data-toggle="tooltip" data-placement="top" title="Ver en Google Maps" target="_blank">
+                <a href="{{ meeting.maps }}" class="arrow-maps" data-toggle="tooltip" data-placement="top" title="Ver en Google Maps">
                   <i class="fa fa-location-arrow"></i>
                   <strong>{{ meeting.location }}</strong>
+                  <i class="fas fa-external-link-alt"></i>
                 </a>{% if meeting.location_help %} ({{meeting.location_help}}){% endif %}<br/>
                 {{ meeting.place }}<br/>
                 {% if meeting.street %}

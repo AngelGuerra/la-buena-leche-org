@@ -7,9 +7,10 @@
     {% for meeting in meetings %}
       <div class="col-6 col-md-4 col-xl-2">
         <address>
-          <a href="{{ meeting.maps }}" class="arrow-maps" data-toggle="tooltip" data-placement="top" title="Ver en Google Maps" target="_blank">
+          <a href="{{ meeting.maps }}" class="arrow-maps" data-toggle="tooltip" data-placement="top" title="Ver en Google Maps">
             <i class="fa fa-location-arrow"></i>
             <strong>{{ meeting.location }}</strong>
+            <i class="fas fa-external-link-alt"></i>
           </a><br>
           {{ meeting.day }}:<br>
           De {{ meeting.start }} a {{ meeting.end }}
@@ -44,11 +45,11 @@
           <span class="fa-li"><i class="fa fa-envelope"></i></span> <a href="mailto:{{site.email}}"><span class="obfuscated-email" data-website="{{site.email | split: '@' | last | split: '' | reverse | join: '' }}" data-user="{{site.email | split: '@' | first | split: '' | reverse | join: '' }}"></span></a>
         </li>
         <li>
-          <span class="fa-li"><i class="fa fa-rss"></i></span> <a href="{{site.social.blog}}" target="_blank" rel="me">Nuestro blog <i class="fas fa-external-link-alt"></i>
+          <span class="fa-li"><i class="fa fa-rss"></i></span> <a href="{{site.social.blog}}" rel="me">Nuestro blog <i class="fas fa-external-link-alt"></i>
           </a>
         </li>
         <li>
-          <span class="fa-li"><i class="fab fa-instagram"></i></span> <a href="//www.instagram.com/{{site.social.instagram}}" target="_blank" rel="me">Instagram <i class="fas fa-external-link-alt"></i>
+          <span class="fa-li"><i class="fab fa-instagram"></i></span> <a href="//www.instagram.com/{{site.social.instagram}}" rel="me">Instagram <i class="fas fa-external-link-alt"></i>
           </a>
         </li>
       </ul>

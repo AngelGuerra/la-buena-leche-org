@@ -2,6 +2,6 @@ _site
 .sass-cache
 .jekyll-metadata
 .jekyll-cache
-_config.yml
 Gemfile.lock
-google0ea3a9e52673a6e0.html
+vendor
+0.0.0.0
