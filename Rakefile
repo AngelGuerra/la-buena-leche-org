@@ -1,7 +1,7 @@
 require 'html-proofer'
 
 task :test do
-  sh "bundle exec jekyll build"
+  sh "JEKYLL_ENV=production jekyll build --strict_front_matter"
   options = {
     allow_hash_href: true,
     assume_extension: true,

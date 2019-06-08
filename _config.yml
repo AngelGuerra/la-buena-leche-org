@@ -27,17 +27,18 @@ assets:
 
 notice:
   type: info
+  heading: Información sobre encuentros
   content: >
     Cambio temporal <a href="https://compartiendocrianza.blogspot.com/2019/06/cambio-de-lugar-del-encuentro-de-tanos.html" class="alert-link">en la ubicación <i class="fas fa-external-link-alt"></i></a> del encuentro de Tanos
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - Rakefile
+  - .apk

@@ -9,7 +9,13 @@ gem "jekyll", "~> 3.8.5"
 # https://github.com/envygeeks/jekyll-assets#imagemagick
 gem "mini_magick"
 
-# https://github.com/gjtorikian/html-proofer
+# Optimize images using multiple utilities https://github.com/toy/image_optim
+gem "image_optim"
+
+# Precompiled binaries for image_optim https://github.com/toy/image_optim_pack
+gem "image_optim_pack"
+
+# Test your rendered HTML files to make sure they're accurate. https://github.com/gjtorikian/html-proofer
 gem "html-proofer"
 
 # A make-like build utility for Ruby
