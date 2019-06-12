@@ -10,6 +10,7 @@ iban: ES74 2048 2119 8634 0000 2556
 social:
   twitter: asociacionlbl
   facebook: AsociacionLaBuenaLeche
+  instagram: labuenalecheasociacion
   blog: //compartiendocrianza.blogspot.com.es
 
 markdown: kramdown
@@ -25,11 +26,7 @@ assets:
     - "last 2 versions"
     - "IE > 9"
 
-notice:
-  type: info
-  heading: Información sobre encuentros
-  content: >
-    Cambio temporal <a href="https://compartiendocrianza.blogspot.com/2019/06/cambio-de-lugar-del-encuentro-de-tanos.html" class="alert-link">en la ubicación <i class="fas fa-external-link-alt"></i></a> del encuentro de Tanos
+notice: false
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
