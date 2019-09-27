@@ -27,6 +27,12 @@ assets:
     - "IE > 9"
 
 notice: false
+notice:
+  type: info
+  heading: XVI Jornadas de La Buena Leche
+  content: >
+    Nos complace invitaros a las "XVI Jornadas anuales de La Buena Leche", mediante las que aprovechamos para celebrar la Semana Mundial de la Lactancia Materna 2019, y para las que hemos preparado con mucho mimo un programa que esperamos sea de vuestro interés y agrado.
+  footer: <a href="#smlm" title="XVI Jornadas La Buena Leche">Información</a>
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
