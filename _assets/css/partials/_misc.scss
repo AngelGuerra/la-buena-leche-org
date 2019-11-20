@@ -147,4 +147,19 @@ body {
   .embed-responsive-210by297 {
     padding-bottom: 141.42%;
   }
+
+  #teaming {
+    > .row {
+      > div:first-of-type {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: 200px;
+        }
+      }
+    }
+  }
 }

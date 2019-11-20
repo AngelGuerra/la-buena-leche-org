@@ -46,23 +46,6 @@
     }
   }
 
-  #donate {
-    #teaming {
-      > .row {
-        > div:first-of-type {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-
-          img {
-            max-width: 200px;
-          }
-        }
-      }
-    }
-  }
-
   #quotes {
     background-image: asset_url("home/quotes.jpg magick:resize=1920 magick:quality=90");
     @media (max-width: 576px) {
