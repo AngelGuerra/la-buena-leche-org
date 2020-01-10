@@ -65,7 +65,7 @@ $(function() {
   <div class=\"col-12 col-lg-3 col-xl-2\"><p class=\"h5 text-muted\">START &ndash; END</p></div>\
   <div class=\"col-12 col-lg-6 col-xl-8\"><p class=\"h5 text-right\">LOCATION &ndash; PLACE</p></div>\
   </div>";
-  var meetings = $.ajax('/sources/meetings/2019.json');
+  var meetings = $.ajax('/sources/meetings/2020.json');
   $.when(meetings).then(function(data, textStatus, jqXHR) {
     if (jqXHR.status === 200) {
       var all  = [],
