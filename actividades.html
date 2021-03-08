@@ -5,8 +5,8 @@ description: Ofrecemos talleres, conferencias y exposiciones, así como otro tip
 css:
   - actividades
 ---
-{% assign current = site.data.mottos | where: "year", 2019 | first %}
-{% assign mottos  = site.data.mottos | where_exp: "motto", "motto.year != 2019" | sort: "year" %}
+{% assign current = site.data.mottos | where: "year", 2020 | first %}
+{% assign mottos  = site.data.mottos | where_exp: "motto", "motto.year != 2020" | sort: "year" %}
 
 <article>
   <header>

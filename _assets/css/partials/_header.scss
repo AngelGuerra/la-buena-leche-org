@@ -1,6 +1,6 @@
-$duration: .2s;
+$duration: 0.2s;
 $distance: 0.75em;
-$easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 
 header {
   &#main-header {
@@ -30,7 +30,6 @@ header {
       .navbar-collapse {
         .navbar-nav {
           .nav-item {
-
             a {
               position: relative;
               text-decoration: none;
@@ -45,7 +44,7 @@ header {
               &:not(.dropdown-toggle) {
                 &:before,
                 &:after {
-                  content: '';
+                  content: "";
                   position: absolute;
                   bottom: 2px;
                   left: 0;
@@ -55,13 +54,14 @@ header {
                 }
                 &:before {
                   opacity: 0;
-                  transform: translateY(- $distance);
+                  transform: translateY(-$distance);
                   transition: transform 0s $easeOutBack, opacity 0s;
                 }
                 &:after {
                   opacity: 0;
                   transform: translateY($distance/2);
-                  transition: transform $duration $easeOutBack, opacity $duration;
+                  transition: transform $duration $easeOutBack,
+                    opacity $duration;
                 }
                 &:hover,
                 &:focus {
@@ -71,13 +71,14 @@ header {
                     transform: translateY(0);
                   }
                   &:before {
-                    transition: transform $duration $easeOutBack, opacity $duration;
+                    transition: transform $duration $easeOutBack,
+                      opacity $duration;
                   }
                   &:after {
-                    transition: transform 0s $duration $easeOutBack, opacity 0s $duration;
+                    transition: transform 0s $duration $easeOutBack,
+                      opacity 0s $duration;
                   }
                 }
-
               }
             }
 

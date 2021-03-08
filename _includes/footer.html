@@ -2,6 +2,10 @@
 {% assign meetings = site.data.meetings | sort: "order" %}
 
 <div class="container mt-3 mb-5">
+  <p>
+    Debido a la COVID-19 nuestros encuentros se realizarán <em>online</em>, permanece atenta a nuestras redes sociales y a nuestro blog ya que iremos publicando ahí las fechas de los mismos. Los encuentros que realizamos son de manera gratuita y para asistir lo único necesario es que nos contactes por correo electrónico a <a href="mailto:{{site.email}}"><span class="obfuscated-email" data-website="{{site.email | split: '@' | last | split: '' | reverse | join: '' }}" data-user="{{site.email | split: '@' | first | split: '' | reverse | join: '' }}"></span></a>. ¡Te esperamos!
+  </p>
+  {% comment %}
   <div class="row">
     <div class="col-xl-1"></div>
     {% for meeting in meetings %}
@@ -18,6 +22,7 @@
       </div>
     {% endfor %}
   </div>
+  {% endcomment %}
 </div>
 
 <hr>

@@ -8,18 +8,25 @@ body {
   }
   width: 100%;
 
-  h1, .h1,
-  h2, .h2,
-  h3, .h3,
-  h4, .h4,
-  h5, .h5,
-  h6, .h6 {
+  h1,
+  .h1,
+  h2,
+  .h2,
+  h3,
+  .h3,
+  h4,
+  .h4,
+  h5,
+  .h5,
+  h6,
+  .h6 {
     font: {
       family: $lbl-title-font;
     }
   }
 
-  h1, .h1 {
+  h1,
+  .h1 {
     margin: {
       top: 2.5em;
       bottom: 2.5em;
@@ -53,7 +60,8 @@ body {
     }
   }
 
-  h2, .h2 {
+  h2,
+  .h2 {
     margin: {
       bottom: 0.75em;
     }
@@ -97,7 +105,7 @@ body {
 
   .obfuscated-email {
     &::before {
-      content: attr(data-website) "\0040" attr(data-user);
+      content: attr(data-website) "\0040"attr(data-user);
       unicode-bidi: bidi-override;
       direction: rtl;
     }
@@ -119,7 +127,7 @@ body {
 
     &:hover {
       text-decoration: none;
-      box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
     }
 
     .assoc-icon {
@@ -127,19 +135,19 @@ body {
       background-color: $lbl-main-color;
 
       &.fa-calendar-alt {
-        padding: .4375em .5em;
+        padding: 0.4375em 0.5em;
       }
 
       &.fa-tint {
-        padding: .4375em .6em;
+        padding: 0.4375em 0.6em;
       }
 
       &.fa-swatchbook {
-        padding: .4375em;
+        padding: 0.4375em;
       }
 
       &.fa-comments {
-        padding: .4375em .38em;
+        padding: 0.4375em 0.38em;
       }
     }
   }

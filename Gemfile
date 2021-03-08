@@ -1,10 +1,10 @@
 source "https://rubygems.org"
 
-#ruby=ruby-2.6.0
-#ruby-gemset=la-buena-leche-org
-
 # Happy Jekylling!
 gem "jekyll", "~> 3.8.5"
+
+# see: https://github.com/nielsenramon/chalk/issues/195#issuecomment-549992637
+gem "sprockets", "~> 3.7"
 
 # https://github.com/envygeeks/jekyll-assets#imagemagick
 gem "mini_magick"

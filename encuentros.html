@@ -35,26 +35,47 @@ description: Queremos crear una red de apoyo de madre a madre, por medio de encu
         </p>
       </section>
       <section class="col-12 col-md-6">
-        <ul class="list-group encuentros-ul">
+        <div class="alert alert-info">
+          <p>
+            Debido a la COVID-19 nuestros encuentros se realizarán <em>online</em>, permanece atenta a nuestras redes sociales y a nuestro blog ya que iremos publicando ahí las fechas de los mismos.
+          </p>
 
-          {% for meeting in meetings %}
-            <li class="list-group-item">
-              <address>
-                <a href="{{ meeting.maps }}" class="arrow-maps" data-toggle="tooltip" data-placement="top" title="Ver en Google Maps">
-                  <i class="fa fa-location-arrow"></i>
-                  <strong>{{ meeting.location }}</strong>
-                  <i class="fas fa-external-link-alt"></i>
-                </a>{% if meeting.location_help %} ({{meeting.location_help}}){% endif %}<br/>
-                {{ meeting.place }}<br/>
-                {% if meeting.street %}
-                  {{ meeting.street }}{% if meeting.street_help %} ({{meeting.street_help}}){% endif %}<br/>
-                {% endif %}
-                {{ meeting.day }}:<br/>
-                De {{ meeting.start }} a {{ meeting.end }}
-              </address>
-            </li>
-          {% endfor %}
-        </ul>
+          <p>
+            Los encuentros que realizamos son de manera gratuita y para asistir lo único necesario es que nos contactes por correo electrónico a <a href="mailto:{{site.email}}"><span class="obfuscated-email" data-website="{{site.email | split: '@' | last | split: '' | reverse | join: '' }}" data-user="{{site.email | split: '@' | first | split: '' | reverse | join: '' }}"></span></a>. ¡Te esperamos!
+          </p>
+        </div>
+
+        <section>
+          <h3>Marzo 2021</h3>
+          <picture>
+            <source srcset="{% asset encuentros/encuentros-marzo-21.jpeg magick:resize=576 magick:quality=90 @path %} 576w" media="(max-width:576px)">
+            <source srcset="{% asset encuentros/encuentros-marzo-21.jpeg magick:resize=768 magick:quality=90 @path %} 768w" media="(max-width:768px)">
+            <source srcset="{% asset encuentros/encuentros-marzo-21.jpeg magick:resize=992 magick:quality=90 @path %} 992w" media="(max-width:992px)">
+            <img src="{% asset encuentros/encuentros-marzo-21.jpeg magick:resize=1140 magick:quality=90 @path %}" class="img-fluid my-3 rounded" alt="Foto de la Asociación en el Picnic Anual">
+          </picture>
+        </section>
+
+        {% comment %}
+          <ul class="list-group encuentros-ul">
+            {% for meeting in meetings %}
+              <li class="list-group-item">
+                <address>
+                  <a href="{{ meeting.maps }}" class="arrow-maps" data-toggle="tooltip" data-placement="top" title="Ver en Google Maps">
+                    <i class="fa fa-location-arrow"></i>
+                    <strong>{{ meeting.location }}</strong>
+                    <i class="fas fa-external-link-alt"></i>
+                  </a>{% if meeting.location_help %} ({{meeting.location_help}}){% endif %}<br/>
+                  {{ meeting.place }}<br/>
+                  {% if meeting.street %}
+                    {{ meeting.street }}{% if meeting.street_help %} ({{meeting.street_help}}){% endif %}<br/>
+                  {% endif %}
+                  {{ meeting.day }}:<br/>
+                  De {{ meeting.start }} a {{ meeting.end }}
+                </address>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endcomment %}
       </section>
     </div>
   </section>

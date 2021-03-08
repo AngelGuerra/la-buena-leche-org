@@ -4,47 +4,47 @@
   street: null
   street_help: null
   day: Primeros lunes de mes
-  start: '17:30'
-  end: '19:00'
+  start: "17:30"
+  end: "19:00"
   order: 1
-  maps: '//www.google.es/maps/place/Centro+Cultural+Ram%C3%B3n+Pelayo/@43.3841445,-3.73203,17z/data=!4m2!3m1!1s0xd4ecb27f10ca01f:0x46be1d6b4071bd95'
+  maps: "//www.google.es/maps/place/Centro+Cultural+Ram%C3%B3n+Pelayo/@43.3841445,-3.73203,17z/data=!4m2!3m1!1s0xd4ecb27f10ca01f:0x46be1d6b4071bd95"
 - location: Castro Urdiales
   location_help: null
   place: C.E.I.P. San Martín de Campijo
   street: C/ de Aranzal, 11
   street_help: null
   day: Primeros miércoles de mes
-  start: '17:30'
-  end: '19:30'
+  start: "17:30"
+  end: "19:30"
   order: 2
-  maps: '//www.google.es/maps/place/Colegio+Campijo/@43.38357,-3.2239874,207m/data=!3m2!1e3!4b1!4m2!3m1!1s0xd4ef24971b62d4b:0xde941f67b47452f7!6m1!1e1'
+  maps: "//www.google.es/maps/place/Colegio+Campijo/@43.38357,-3.2239874,207m/data=!3m2!1e3!4b1!4m2!3m1!1s0xd4ef24971b62d4b:0xde941f67b47452f7!6m1!1e1"
 - location: Tanos
   location_help: Zona de Torrelavega
   place: Centro Cultural frente al Centro de Salud
   street: Avda. de Joaquín Fernández Vallejo, 123
   street_help: null
   day: Segundos martes de mes
-  start: '17:00'
-  end: '19:00'
+  start: "17:00"
+  end: "19:00"
   order: 3
-  maps: '//www.google.es/maps/place/Avineda+de+Joaquin+Fernandez+Vallejo,+123,+39300+Torrelavega,+Cantabria/@43.3313727,-4.0435936,210m/data=!3m1!1e3!4m5!3m4!1s0xd493dd94477cc27:0xbd755e4436ee261c!8m2!3d43.3313727!4d-4.0430451'
+  maps: "//www.google.es/maps/place/Avineda+de+Joaquin+Fernandez+Vallejo,+123,+39300+Torrelavega,+Cantabria/@43.3313727,-4.0435936,210m/data=!3m1!1e3!4m5!3m4!1s0xd493dd94477cc27:0xbd755e4436ee261c!8m2!3d43.3313727!4d-4.0430451"
 - location: Santander
   location_help: null
   place: Centro Cívico Callealtero
   street: Plaza Derechos Humanos, 1
   street_help: Zona Calle Alta
   day: Terceros martes de mes
-  start: '17:00'
-  end: '19:00'
+  start: "17:00"
+  end: "19:00"
   order: 4
-  maps: '//www.google.es/maps/place/Plaza+los+Derechos+Humanos,+1,+39008+Santander,+Cantabria/@43.45852,-3.81782,17z/data=!3m1!4b1!4m2!3m1!1s0xd494a2cd27e3409:0xef8977d24106b03a'
+  maps: "//www.google.es/maps/place/Plaza+los+Derechos+Humanos,+1,+39008+Santander,+Cantabria/@43.45852,-3.81782,17z/data=!3m1!4b1!4m2!3m1!1s0xd494a2cd27e3409:0xef8977d24106b03a"
 - location: Puente San Miguel
   location_help: Zona de Reocín
   place: Casa de la Cultura
   street: Bº La Robleda, 100
   street_help: null
   day: Últimos viernes de mes
-  start: '17:00'
-  end: '19:00'
+  start: "17:00"
+  end: "19:00"
   order: 5
-  maps: '//www.google.es/maps/place/Casa+de+Cultura/@43.3606006,-4.0849641,15z/data=!4m5!1m2!2m1!1sCasa+de+Cultura!3m1!1s0x0000000000000000:0xa16a2b31eb16707d'
+  maps: "//www.google.es/maps/place/Casa+de+Cultura/@43.3606006,-4.0849641,15z/data=!4m5!1m2!2m1!1sCasa+de+Cultura!3m1!1s0x0000000000000000:0xa16a2b31eb16707d"

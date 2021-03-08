@@ -20,7 +20,7 @@ encoding: utf-8
   Email: info [at] regazofotografia [dot] com
   From: Santander, Cantabria, Spain
 
-  Name: My little son
+  Name: My little sons
 
 /* SITE */
 

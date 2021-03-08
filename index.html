@@ -138,17 +138,40 @@ js:
       <h2>Próximos encuentros</h2>
     </header>
 
-    <div id="meetings" class="container">
-      <div class="loader">
-        <div class="spinner">
+
+    <div class="container">
+      <p>
+        Debido a la COVID-19 nuestros encuentros se realizarán <em>online</em>, permanece atenta a nuestras redes sociales y a nuestro blog ya que iremos publicando ahí las fechas de los mismos.
+      </p>
+
+      <p>
+        Los encuentros que realizamos son de manera gratuita y para asistir lo único necesario es que nos contactes por correo electrónico a <a href="mailto:{{site.email}}"><span class="obfuscated-email" data-website="{{site.email | split: '@' | last | split: '' | reverse | join: '' }}" data-user="{{site.email | split: '@' | first | split: '' | reverse | join: '' }}"></span></a>. ¡Te esperamos!
+      </p>
+
+      <section class="text-center">
+        <h3>Marzo 2021</h3>
+        <picture>
+          <source srcset="{% asset encuentros/encuentros-marzo-21.jpeg magick:resize=576 magick:quality=90 @path %} 576w" media="(max-width:576px)">
+          <source srcset="{% asset encuentros/encuentros-marzo-21.jpeg magick:resize=768 magick:quality=90 @path %} 768w" media="(max-width:768px)">
+          <source srcset="{% asset encuentros/encuentros-marzo-21.jpeg magick:resize=992 magick:quality=90 @path %} 992w" media="(max-width:992px)">
+          <img src="{% asset encuentros/encuentros-marzo-21.jpeg magick:resize=1140 magick:quality=90 @path %}" class="img-fluid my-3 rounded" alt="Encuentros en marzo días 9 y 25">
+        </picture>
+      </section>
+    </div>
+
+    {% comment %}
+      <div id="meetings" class="container">
+        <div class="loader">
           <div class="spinner">
-              <div class="spinner">
-                  <div class="spinner">
-                  </div>
-              </div>
+            <div class="spinner">
+                <div class="spinner">
+                    <div class="spinner">
+                    </div>
+                </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    {% endcomment %}
   </section>
 </article>

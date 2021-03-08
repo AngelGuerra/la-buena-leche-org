@@ -1,42 +1,42 @@
-- phone: '942709839'
-  label: '942 70 98 39'
+- phone: "942709839"
+  label: "942 70 98 39"
   name: Bea B.
   whatsapp: false
   help: null
   icon: fa fa-phone
-- phone: '675110051'
-  label: '675 11 00 51'
+- phone: "675110051"
+  label: "675 11 00 51"
   name: Bea C.
   whatsapp: false
   help: null
   icon: fa fa-phone
-- phone: '646091412'
-  label: '646 09 14 12'
+- phone: "646091412"
+  label: "646 09 14 12"
   name: Marta
   whatsapp: false
   help: null
   icon: fa fa-phone
-- phone: '626605415'
-  label: '626 60 54 15'
-  name: Lorena
-  whatsapp: false
-  help: null
-  icon: fa fa-phone
-- phone: '680747305'
-  label: '680 74 73 05'
-  name: Blanca
-  whatsapp: false
-  help: 'Alquiler de sacaleches'
-  icon: fa fa-phone
-- phone: '644015410'
-  label: '644 01 54 10'
+- phone: "644015410"
+  label: "644 01 54 10"
   name: Noemí
   whatsapp: false
   help: null
   icon: fa fa-phone
-- phone: '653964538'
-  label: '653 96 45 38'
+- phone: "626605415"
+  label: "626 60 54 15"
+  name: Lorena
+  whatsapp: true
+  help: "WhatsApp"
+  icon: fab fa-whatsapp
+- phone: "653964538"
+  label: "653 96 45 38"
   name: Narelia
   whatsapp: true
-  help: 'WhatsApp'
+  help: "WhatsApp"
   icon: fab fa-whatsapp
+- phone: "680747305"
+  label: "680 74 73 05"
+  name: Blanca
+  whatsapp: false
+  help: "Alquiler de sacaleches"
+  icon: fa fa-phone

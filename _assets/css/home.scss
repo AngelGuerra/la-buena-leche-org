@@ -1,20 +1,22 @@
-@import 'partials/_vars';
+@import "partials/_vars";
 
 @keyframes rotate {
-  100% {transform: rotate(360deg);}
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #home {
   .loader {
-	  width: 8em;
+    width: 8em;
     height: 8em;
     margin: 2em auto;
 
     .spinner {
       width: 100%;
       height: 100%;
-      border: .6em solid #333;
-      border-top: .6em solid $lbl-main-color;
+      border: 0.6em solid #333;
+      border-top: 0.6em solid $lbl-main-color;
       border-radius: 50%;
       animation: rotate 5s linear infinite;
     }
@@ -31,34 +33,54 @@
   }
 
   #welcome {
-    background-image: asset_url("home/welcome.jpg magick:resize=1920 magick:quality=90");
+    background-image: asset_url(
+      "home/welcome.jpg magick:resize=1920 magick:quality=90"
+    );
     @media (max-width: 576px) {
-      background-image: asset_url("home/welcome.jpg magick:resize=576 magick:quality=90");
+      background-image: asset_url(
+        "home/welcome.jpg magick:resize=576 magick:quality=90"
+      );
     }
     @media (max-width: 768px) {
-      background-image: asset_url("home/welcome.jpg magick:resize=768 magick:quality=90");
+      background-image: asset_url(
+        "home/welcome.jpg magick:resize=768 magick:quality=90"
+      );
     }
     @media (max-width: 992px) {
-      background-image: asset_url("home/welcome.jpg magick:resize=992 magick:quality=90");
+      background-image: asset_url(
+        "home/welcome.jpg magick:resize=992 magick:quality=90"
+      );
     }
     @media (max-width: 1200px) {
-      background-image: asset_url("home/welcome.jpg magick:resize=1200 magick:quality=90");
+      background-image: asset_url(
+        "home/welcome.jpg magick:resize=1200 magick:quality=90"
+      );
     }
   }
 
   #quotes {
-    background-image: asset_url("home/quotes.jpg magick:resize=1920 magick:quality=90");
+    background-image: asset_url(
+      "home/quotes.jpg magick:resize=1920 magick:quality=90"
+    );
     @media (max-width: 576px) {
-      background-image: asset_url("home/quotes.jpg magick:resize=576 magick:quality=90");
+      background-image: asset_url(
+        "home/quotes.jpg magick:resize=576 magick:quality=90"
+      );
     }
     @media (max-width: 768px) {
-      background-image: asset_url("home/quotes.jpg magick:resize=768 magick:quality=90");
+      background-image: asset_url(
+        "home/quotes.jpg magick:resize=768 magick:quality=90"
+      );
     }
     @media (max-width: 992px) {
-      background-image: asset_url("home/quotes.jpg magick:resize=992 magick:quality=90");
+      background-image: asset_url(
+        "home/quotes.jpg magick:resize=992 magick:quality=90"
+      );
     }
     @media (max-width: 1200px) {
-      background-image: asset_url("home/quotes.jpg magick:resize=1200 magick:quality=90");
+      background-image: asset_url(
+        "home/quotes.jpg magick:resize=1200 magick:quality=90"
+      );
     }
 
     blockquote {
@@ -80,7 +102,7 @@
 
         p {
           @media (max-width: 992px) {
-            text-align: center!important;
+            text-align: center !important;
           }
         }
       }
@@ -104,7 +126,7 @@
 
         p {
           font: {
-            size: 1.10em;
+            size: 1.1em;
             weight: bold;
           }
           border: {
