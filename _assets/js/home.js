@@ -14,14 +14,14 @@ $(function () {
     $("#entries").rss(
       "http://compartiendocrianza.blogspot.com/atom.xml",
       {
-        limit: 4, // default: 4
+        limit: 3, // default: 4
         // offsetStart: false,
         // offsetEnd: false,
         ssl: true,
         // host: 'feedrapp.info',
         layoutTemplate: '<div class="row">{entries}</div>',
         entryTemplate:
-          '<div class="col-12 col-sm-6 col-lg-3 mb-3">\
+          '<div class="col-12 col-md-4 mb-3">\
         <div class="card custom-card">\
         <img class="card-img-top" src="{teaserImageUrl}" alt="{title}">\
         <div class="card-header"><p>{title}</p><small>{date}</small></div>\
