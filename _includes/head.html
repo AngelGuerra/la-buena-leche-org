@@ -1,32 +1,73 @@
 <!-- Meta -->
 <title>{{ page.title | strip_html }} | La Buena Leche</title>
-<meta name="description" content="{{ page.description | strip_html }}"/>
-<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta charset="UTF-8">
+<meta name="description" content="{{ page.description | strip_html }}" />
+<meta
+  name="viewport"
+  content="width=device-width, height=device-height, initial-scale=1.0"
+/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta charset="UTF-8" />
 {% if page.noindex %}
-<meta name="robots" content="noindex, nofollow"/>
+<meta name="robots" content="noindex, nofollow" />
 {% else %}
-<meta name="robots" content="index, follow"/>
+<meta name="robots" content="index, follow" />
 {% endif %}
-<meta name="author" content="Asociación La Buena Leche"/>
+<meta name="author" content="Asociación La Buena Leche" />
 
 <!-- Favicon -->
-<link rel="apple-touch-icon" sizes="180x180" href="{% asset favicons/apple-touch-icon.png @path %}">
-<link rel="icon" type="image/png" sizes="32x32" href="{% asset favicons/favicon.png magick:resize=32 @path %}">
-<link rel="icon" type="image/png" sizes="16x16" href="{% asset favicons/favicon.png magick:resize=16 @path %}">
-<link rel="manifest" href="/sources/site.webmanifest">
-<link rel="mask-icon" href="{% asset favicons/safari-pinned-tab.svg @path %}" color="{{ site.style.color }}">
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="{% asset favicons/apple-touch-icon.png @path %}"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="32x32"
+  href="{% asset favicons/favicon.png magick:resize=32 @path %}"
+/>
+<link
+  rel="icon"
+  type="image/png"
+  sizes="16x16"
+  href="{% asset favicons/favicon.png magick:resize=16 @path %}"
+/>
+<link rel="manifest" href="/sources/site.webmanifest" />
+<link
+  rel="mask-icon"
+  href="{% asset favicons/safari-pinned-tab.svg @path %}"
+  color="{{ site.style.color }}"
+/>
 <link rel="author" href="/humans.txt" />
-<meta name="msapplication-TileColor" content="{{ site.style.color }}">
-<meta name="msapplication-TileImage" content="{% asset favicons/mstile-144x144.png @path %}">
-<meta name="theme-color" content="{{ site.style.color }}">
+<meta name="msapplication-TileColor" content="{{ site.style.color }}" />
+<meta
+  name="msapplication-TileImage"
+  content="{% asset favicons/mstile-144x144.png @path %}"
+/>
+<meta name="theme-color" content="{{ site.style.color }}" />
 
 <!-- Stylesheets -->
-<link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400i,700|Montserrat:300,400,400i,700&amp;subset=latin-ext">
-<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css" />
+<link
+  rel="stylesheet"
+  href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+  integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
+  crossorigin="anonymous"
+/>
+<link
+  rel="stylesheet"
+  href="//use.fontawesome.com/releases/v5.3.1/css/all.css"
+  integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+  crossorigin="anonymous"
+/>
+<link
+  rel="stylesheet"
+  href="//fonts.googleapis.com/css?family=Merriweather:400,400i,700|Montserrat:300,400,400i,700&amp;subset=latin-ext"
+/>
+<link
+  rel="stylesheet"
+  type="text/css"
+  href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.css"
+/>
 
 {% asset lbl.scss @inline %}
 {% if page.css %}

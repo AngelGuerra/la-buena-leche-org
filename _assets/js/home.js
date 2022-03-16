@@ -1,6 +1,13 @@
 $(function () {
   var $body = $("body");
 
+  // Elimina todas las cookies de la página
+  document.cookie.split(";").forEach(function (c) {
+    document.cookie = c
+      .replace(/^ +/, "")
+      .replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");
+  });
+
   if ($("#home").length) {
     $body
       .on("click", ".custom-card", function () {

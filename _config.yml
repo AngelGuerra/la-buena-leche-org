@@ -4,14 +4,14 @@ email: labuenalecheasociacion@gmail.com
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://labuenaleche.org" # the base hostname & protocol for your site, e.g. http://example.com
 gtag: UA-66444400-1
-iban: ES74 2048 2119 8634 0000 2556
+iban: ES82 2100 1131 8602 0012 2378
 
 # Social network and other links
 social:
   twitter: asociacionlbl
   facebook: AsociacionLaBuenaLeche
   instagram: labuenalecheasociacion
-  blog: //compartiendocrianza.blogspot.com.es
+  blog: https://compartiendocrianza.blogspot.com/
 
 markdown: kramdown
 plugins:

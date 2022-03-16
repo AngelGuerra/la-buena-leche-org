@@ -18,5 +18,13 @@ footer {
     }
 
     color: #fff;
+
+    div.legal {
+      text-align: right;
+
+      @media screen and (max-width: 768px) {
+        text-align: left;
+      }
+    }
   }
 }

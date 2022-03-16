@@ -3,74 +3,141 @@
 
 <div class="container mt-3 mb-5">
   <p>
-    Debido a la COVID-19 nuestros encuentros se realizarán <em>online</em>, permanece atenta a nuestras redes sociales y a nuestro blog ya que iremos publicando ahí las fechas de los mismos. Los encuentros que realizamos son de manera gratuita y para asistir lo único necesario es que nos contactes por correo electrónico a <a href="mailto:{{site.email}}"><span class="obfuscated-email" data-website="{{site.email | split: '@' | last | split: '' | reverse | join: '' }}" data-user="{{site.email | split: '@' | first | split: '' | reverse | join: '' }}"></span></a>. ¡Te esperamos!
+    Debido a la COVID-19 nuestros encuentros se realizarán <em>online</em>,
+    permanece atenta a nuestras redes sociales y a nuestro blog ya que iremos
+    publicando ahí las fechas de los mismos. Los encuentros que realizamos son
+    de manera gratuita y para asistir lo único necesario es que nos contactes
+    por correo electrónico a
+    <a href="mailto:{{site.email}}"
+      ><span
+        class="obfuscated-email"
+        data-website="{{site.email | split: '@' | last | split: '' | reverse | join: '' }}"
+        data-user="{{site.email | split: '@' | first | split: '' | reverse | join: '' }}"
+      ></span></a
+    >. ¡Te esperamos!
   </p>
   {% comment %}
   <div class="row">
     <div class="col-xl-1"></div>
     {% for meeting in meetings %}
-      <div class="col-6 col-md-4 col-xl-2">
-        <address>
-          <a href="{{ meeting.maps }}" class="arrow-maps" data-toggle="tooltip" data-placement="top" title="Ver en Google Maps">
-            <i class="fa fa-location-arrow"></i>
-            <strong>{{ meeting.location }}</strong>
-            <i class="fas fa-external-link-alt"></i>
-          </a><br>
-          {{ meeting.day }}:<br>
-          De {{ meeting.start }} a {{ meeting.end }}
-        </address>
-      </div>
+    <div class="col-6 col-md-4 col-xl-2">
+      <address>
+        <a
+          href="{{ meeting.maps }}"
+          class="arrow-maps"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Ver en Google Maps"
+        >
+          <i class="fa fa-location-arrow"></i>
+          <strong>{{ meeting.location }}</strong>
+          <i class="fas fa-external-link-alt"></i> </a
+        ><br />
+        {{ meeting.day }}:<br />
+        De {{ meeting.start }} a {{ meeting.end }}
+      </address>
+    </div>
     {% endfor %}
   </div>
   {% endcomment %}
 </div>
 
-<hr>
+<hr />
 
 <div class="container">
   <div class="row">
-    <div class="col-12 col-lg-4 mb-5">
+    <div class="col-12 col-md-6">
+      <p>Contacta:</p>
       <ul class="fa-ul">
         {% for contact in contacts %}
         <li>
           <span class="fa-li"><i class="{{contact.icon}}"></i></span>
-          <span class="d-none d-sm-block">{{contact.label}} - {{contact.name}}{% if contact.help %} ({{contact.help}}){% endif %}</span>
+          <span class="d-none d-sm-block"
+            >{{contact.label}} - {{contact.name}}{% if contact.help %}
+            ({{contact.help}}){% endif %}</span
+          >
 
           <span class="d-block d-sm-none">
             {% if contact.whatsapp %}
-              <a href="//wa.me/34{{contact.phone}}" rel="nofollow">{{contact.label}}</a>
+            <a href="//wa.me/34{{contact.phone}}" rel="nofollow"
+              >{{contact.label}}</a
+            >
             {% else %}
-              <a href="tel:{{contact.phone}}" rel="nofollow">{{contact.label}}</a>
+            <a href="tel:{{contact.phone}}" rel="nofollow">{{contact.label}}</a>
             {% endif %}
-            <span>- {{contact.name}}{% if contact.help %} ({{contact.help}}){% endif %}</span>
+            <span
+              >- {{contact.name}}{% if contact.help %} ({{contact.help}}){%
+              endif %}</span
+            >
           </span>
         </li>
         {% endfor %}
         <li>
-          <span class="fa-li"><i class="fa fa-envelope"></i></span> <a href="mailto:{{site.email}}"><span class="obfuscated-email" data-website="{{site.email | split: '@' | last | split: '' | reverse | join: '' }}" data-user="{{site.email | split: '@' | first | split: '' | reverse | join: '' }}"></span></a>
-        </li>
-        <li>
-          <span class="fa-li"><i class="fa fa-rss"></i></span> <a href="{{site.social.blog}}" rel="me">Nuestro blog <i class="fas fa-external-link-alt"></i>
-          </a>
-        </li>
-        <li>
-          <span class="fa-li"><i class="fab fa-instagram"></i></span> <a href="//www.instagram.com/{{site.social.instagram}}" rel="me">Instagram <i class="fas fa-external-link-alt"></i>
-          </a>
+          <span class="fa-li"><i class="fa fa-envelope"></i></span>
+          <a href="mailto:{{site.email}}"
+            ><span
+              class="obfuscated-email"
+              data-website="{{site.email | split: '@' | last | split: '' | reverse | join: '' }}"
+              data-user="{{site.email | split: '@' | first | split: '' | reverse | join: '' }}"
+            ></span
+          ></a>
         </li>
       </ul>
     </div>
+    <div class="col-12 col-md-6 legal">
+      <p>Información legal:</p>
+      <ul class="fa-ul">
+        <li>
+          <a href="/aviso-legal/">Aviso legal</a>
+        </li>
+        <li>
+          <a href="/politica-de-cookies/">Política de cookies</a>
+        </li>
+        <li>
+          <a href="/politica-de-privacidad/">Política de privacidad</a>
+        </li>
+      </ul>
 
-    <div class="col-12 col-lg-4 mb-3">
-      <a class="twitter-timeline" data-height="250" data-theme="light" data-link-color="#c17e93" href="//twitter.com/{{site.social.twitter}}?ref_src=twsrc%5Etfw">Tweets de la Asociación</a>
-    </div>
-
-    <div class="col-12 col-lg-4">
-      <div class="fb-page" data-href="https://es-es.facebook.com/{{site.social.facebook}}" data-tabs="timeline" data-width="500" data-height="250" data-small-header="true" data-adapt-container-width="true" data-hide-cover="true" data-show-facepile="true"><blockquote cite="https://es-es.facebook.com/{{site.social.facebook}}" class="fb-xfbml-parse-ignore"><a href="//es-es.facebook.com/{{site.social.facebook}}">La Buena Leche en Facebook</a></blockquote></div>
+      <p>Síguenos:</p>
+      <ul class="fa-ul">
+        <li>
+          <a
+            href="https://www.instagram.com/{{site.social.instagram}}"
+            rel="me noopener noreferrer"
+            target="_blank"
+            >Instagram</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://es-es.facebook.com/{{site.social.facebook}}"
+            rel="me noopener noreferrer"
+            target="_blank"
+            >Facebook</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://twitter.com/{{site.social.twitter}}"
+            rel="me noopener noreferrer"
+            target="_blank"
+            >Twitter</a
+          >
+        </li>
+        <li>
+          <a
+            href="{{site.social.blog}}"
+            rel="me noopener noreferrer"
+            target="_blank"
+            >En nuestro blog</a
+          >
+        </li>
+      </ul>
     </div>
   </div>
 </div>
 
-<hr>
+<hr />
 
 <div class="container">
   <p class="text-center">
