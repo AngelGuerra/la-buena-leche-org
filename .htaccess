@@ -8,10 +8,9 @@ RewriteCond %{HTTP_HOST} ^labuenaleche.com [nc]
 RewriteRule ^(.*)$ https://www.labuenaleche.org/$1 [r=301,nc]
 
 # Redirecciones
-RedirectMatch 301 ^/actividades/(charla-taller-introduccion-a-la-disciplina-positiva|calendario)$ /encuentros
-RedirectMatch 301 ^/actividades/(divulgativas|ludicas)$ /actividades
-RedirectMatch 301 ^/actividades/semana-mundial-lactancia-materna-(.*)$ /actividades
-RedirectMatch 301 ^/material/(.*)$ /material
+RedirectMatch 301 ^/actividades/(charla-taller-introduccion-a-la-disciplina-positiva|calendario)$ /encuentros/
+RedirectMatch 301 ^/actividades/(divulgativas|ludicas)$ /actividades/
+RedirectMatch 301 ^/actividades/semana-mundial-lactancia-materna-(.*)$ /actividades/
 Redirect 301 /informacion/como-empezar /lactancia/como-empezar
 Redirect 301 /informacion/beneficios-de-la-lactancia /lactancia/beneficios
 Redirect 301 /informacion/problemas-y-soluciones /lactancia/problemas-y-soluciones
@@ -20,7 +19,7 @@ Redirect 301 /informacion/destete /lactancia/destete
 Redirect 301 /informacion/lactancia-y-trabajo /lactancia/derechos-trabajo
 Redirect 301 /informacion/grupos-de-apoyo /lactancia/grupos-de-apoyo
 Redirect 301 /informacion/otros-enlaces /lactancia/otros-enlaces
-Redirect 301 /contacta /contacto
+Redirect 301 /contacta /contacto/
 Redirect 301 /mapa-web /
 
 ErrorDocument 404 /404
