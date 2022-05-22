@@ -156,6 +156,14 @@ body {
     padding-bottom: 141.42%;
   }
 
+  .video-player {
+    display: block;
+    aspect-ratio: 16/9;
+    width: 100%;
+    max-width: 724px;
+    margin: 0 auto 3rem;
+  }
+
   #teaming {
     > .row {
       > div:first-of-type {

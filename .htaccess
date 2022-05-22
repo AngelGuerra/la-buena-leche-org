@@ -21,6 +21,7 @@ Redirect 301 /informacion/grupos-de-apoyo /lactancia/grupos-de-apoyo
 Redirect 301 /informacion/otros-enlaces /lactancia/otros-enlaces
 Redirect 301 /contacta /contacto/
 Redirect 301 /mapa-web /
+Redirect 301 /encuentros /que-hacemos/
 
 ErrorDocument 404 /404
 
