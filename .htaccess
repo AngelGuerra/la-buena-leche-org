@@ -22,6 +22,7 @@ Redirect 301 /informacion/otros-enlaces /lactancia/otros-enlaces
 Redirect 301 /contacta /contacto/
 Redirect 301 /mapa-web /
 Redirect 301 /encuentros /que-hacemos/
+Redirect 301 /actividades /que-hacemos/
 
 ErrorDocument 404 /404
 
