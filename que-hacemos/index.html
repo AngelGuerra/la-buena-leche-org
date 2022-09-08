@@ -63,11 +63,16 @@ css:
           {% for meeting in meetings %}
             <li class="list-group-item">
               <address>
+                {% if meeting.maps %}
                 <a href="{{ meeting.maps }}" class="arrow-maps" data-toggle="tooltip" data-placement="top" title="Ver en Google Maps">
                   <i class="fa fa-location-arrow"></i>
                   <strong>{{ meeting.location }}</strong>
                   <i class="fas fa-external-link-alt"></i>
-                </a>{% if meeting.location_help %} ({{meeting.location_help}}){% endif %}<br/>
+                </a>
+                {% else %}
+                  <strong>{{meeting.location}}</strong>
+                {% endif %}
+                {% if meeting.location_help %} ({{meeting.location_help}}){% endif %}<br/>
                 {{ meeting.place }}<br/>
                 {% if meeting.street %}
                   {{ meeting.street }}{% if meeting.street_help %} ({{meeting.street_help}}){% endif %}<br/>

@@ -4,32 +4,29 @@
 <div class="container mt-3">
   <div class="row">
     {% for meeting in meetings %}
-    <div class="col-6 col-md-4 col-xl-2">
+    <div class="col-6 col-md-3 col-xl-3">
       <address>
-        <a
-          href="{{ meeting.maps }}"
-          class="arrow-maps"
-          data-toggle="tooltip"
-          data-placement="top"
-          title="Ver en Google Maps"
-        >
-          <i class="fa fa-location-arrow"></i>
-          <strong>{{ meeting.location }}</strong>
-          <i class="fas fa-external-link-alt"></i> </a
-        ><br />
+        {% if meeting.maps %}
+          <a
+            href="{{ meeting.maps }}"
+            class="arrow-maps"
+            data-toggle="tooltip"
+            data-placement="top"
+            title="Ver en Google Maps"
+          >
+            <i class="fa fa-location-arrow"></i>
+            <strong>{{ meeting.location }}</strong>
+            <i class="fas fa-external-link-alt"></i>
+          </a>
+        {% else %}
+          <strong>{{meeting.location}}</strong>
+        {% endif %}
+        <br />
         {{ meeting.day }}:<br />
         De {{ meeting.start }} a {{ meeting.end }}
       </address>
     </div>
     {% endfor %}
-
-    <div class="col-6 col-md-8 col-xl-10">
-      <p>
-        Alguno de nuestros encuentros se realizan <em>online</em> y de manera
-        gratuita, para asistir lo único necesario es que nos contactes por
-        correo electrónico. ¡Te esperamos!
-      </p>
-    </div>
   </div>
 </div>
 
