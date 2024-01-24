@@ -1,10 +1,10 @@
-{% assign contacts = site.data.contacts | sort: "name" %}
 {% assign meetings = site.data.meetings | sort: "order" %}
 
 <div class="container mt-3">
+  <p class="h3 mb-4">Nuestros encuentros</p>
   <div class="row">
     {% for meeting in meetings %}
-    <div class="col-6 col-md-3 col-xl-3">
+    <div class="col-6 col-md-3">
       <address>
         {% if meeting.maps %}
           <a
@@ -22,6 +22,8 @@
           <strong>{{meeting.location}}</strong>
         {% endif %}
         <br />
+        <span>{{meeting.place}}</span>
+        <br />
         {{ meeting.day }}:<br />
         De {{ meeting.start }} a {{ meeting.end }}
       </address>
@@ -35,9 +37,9 @@
 <div class="container">
   <div class="row">
     <div class="col-12 col-md-6">
-      <p>Contacta:</p>
+      <p class="h3 mb-4">Contacta</p>
       <ul class="fa-ul">
-        {% for contact in contacts %}
+        {% for contact in site.data.contacts %}
         <li>
           <span class="fa-li"><i class="{{contact.icon}}"></i></span>
           <span class="d-none d-sm-block"
@@ -73,7 +75,7 @@
       </ul>
     </div>
     <div class="col-12 col-md-6 legal">
-      <p>Información legal:</p>
+      <p class="h3 mb-4">Información legal</p>
       <ul class="fa-ul">
         <li>
           <a href="/aviso-legal/">Aviso legal</a>
@@ -86,7 +88,7 @@
         </li>
       </ul>
 
-      <p>Síguenos:</p>
+      <p class="h3 mb-4">Síguenos</p>
       <ul class="fa-ul">
         <li>
           <a

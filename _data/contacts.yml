@@ -16,15 +16,35 @@
   whatsapp: false
   help: null
   icon: fa fa-phone
+
 - phone: "626605415"
   label: "626 60 54 15"
   name: Lorena
   whatsapp: true
   help: "WhatsApp"
   icon: fab fa-whatsapp
+- phone: "653964538"
+  label: "653 96 45 38"
+  name: Narelia
+  whatsapp: true
+  help: "WhatsApp"
+  icon: fab fa-whatsapp
+
+- phone: "608448828"
+  label: "608 44 88 28"
+  name: Annia
+  whatsapp: false
+  help: "Alquiler de sacaleches - Maliaño"
+  icon: fa fa-phone
 - phone: "680747305"
   label: "680 74 73 05"
   name: Blanca
   whatsapp: false
-  help: "Alquiler de sacaleches"
+  help: "Alquiler de sacaleches - Santander"
+  icon: fa fa-phone
+- phone: "685776022"
+  label: "685 77 60 22"
+  name: Miriam
+  whatsapp: false
+  help: "Alquiler de sacaleches - Boo de Piélagos"
   icon: fa fa-phone

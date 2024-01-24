@@ -5,7 +5,6 @@ description: En la Asociación no contamos con una ubicación física pero puede
 css:
   - contacto
 ---
-{% assign contacts  = site.data.contacts | sort: "name" %}
 
 <article>
   <header>
@@ -24,7 +23,7 @@ css:
     </p>
 
     <div class="list-group">
-      {% for contact in contacts %}
+      {% for contact in site.data.contacts %}
       {% assign link = "tel:" %}
         {% if contact.whatsapp %}
           {% assign link = "//wa.me/34" %}

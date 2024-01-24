@@ -31,7 +31,7 @@ También podemos utilizar Docker para el desarrollo:
 
 ```bash
 # Anfitrión
-sudo docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" -p 4000:4000 -it jekyll/jekyll:latest bash
+sudo docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/usr/local/bundle" -p 4000:4000 -it jekyll/jekyll:3.8.5 bash
 # Docker
 bundle install
 JEKYLL_ENV=development jekyll serve --host 0.0.0.0

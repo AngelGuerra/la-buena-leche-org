@@ -8,19 +8,9 @@
   end: "19:00"
   order: 1
   maps: "https://www.google.es/maps/place/Lacampa/@43.3520695,-4.0478425,18.75z/data=!4m5!3m4!1s0xd493e6b1e28d703:0x376d153e7b3993a3!8m2!3d43.3520831!4d-4.0476402"
-- location: Online
-  location_help: Requiere inscripción previa por correo electrónico
-  place: null
-  street: null
-  street_help: null
-  day: Segundos martes de mes
-  start: "17:00"
-  end: "19:00"
-  order: 2
-  maps: null
 - location: Santander
-  location_help: null
-  place: Centro cívico San Román
+  location_help: San Román
+  place: Centro cívico Mercedes Cacicedo
   street: Calle el Somo 90, 39012, Santander, Cantabria
   street_help: null
   day: Terceros martes de mes
@@ -28,13 +18,3 @@
   end: "19:00"
   order: 3
   maps: https://www.google.com/maps/place/Centro+Civico+El+Somo/@43.4663382,-3.863283,17z/data=!3m1!4b1!4m5!3m4!1s0xd494904aac0ffc9:0x90376abc80b78919!8m2!3d43.4663038!4d-3.8610804
-- location: Treto
-  location_help: null
-  place: Telecentro y ciberespacio Treto
-  street: Barrio la Peña 1, 39760, Cantabria
-  street_help: Antiguas escuelas, junto al consultorio
-  day: Últimos viernes de mes
-  start: "17:00"
-  end: "19:00"
-  order: 4
-  maps: https://www.google.com/maps/place/Antiguas+Escuelas+de+Treto/@43.3939242,-3.4734664,19z/data=!4m12!1m6!3m5!1s0xd4ec0e26073e9eb:0x99c66f9533b63401!2sConsultorio+De+Treto!8m2!3d43.3936897!4d-3.4726316!3m4!1s0xd4ec1e224bb58dd:0x751b499d383bb95d!8m2!3d43.3939242!4d-3.4729192
