@@ -36,4 +36,20 @@ sudo docker run --rm --volume="$PWD:/srv/jekyll" --volume="$PWD/vendor/bundle:/u
 bundle install
 JEKYLL_ENV=development jekyll serve --host 0.0.0.0
 # Ahora puedes ver en http://{DOCKERIP}:4000 o http://127.0.0.1:4000 la página
+
+# Build
+JEKYLL_ENV=production jekyll build --strict_front_matter
+```
+
+## Troubleshooting
+
+```bash
+# Liquid Exception: You must have ImageMagick or GraphicsMagick installed in /_layouts/default.html
+apk add imagemagick
+```
+
+```bash
+# Background images not shown
+jekyll clean
+rm -rf .jekyll-cache
 ```

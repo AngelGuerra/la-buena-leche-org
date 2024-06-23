@@ -1,10 +1,10 @@
 footer {
   &#main-footer {
     background: {
-      // color: #fc9;
-      image: asset_url("footer.jpg magick:resize=1140 magick:quality=90");
-      // https://pixabay.com/es/lactancia-materna-beb%C3%A9-mama-827169/
-      size: cover;
+      color: #fafafa;
+      // image: asset_url("footer.jpg magick:resize=1140 magick:quality=90");
+      // // https://pixabay.com/es/lactancia-materna-beb%C3%A9-mama-827169/
+      // size: cover;
     }
     padding: {
       bottom: 1em;
@@ -17,7 +17,7 @@ footer {
       size: 0.8em;
     }
 
-    color: #fff;
+    // color: #fff;
 
     div.legal {
       text-align: right;
