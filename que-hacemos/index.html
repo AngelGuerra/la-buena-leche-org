@@ -1,19 +1,17 @@
 ---
 layout: default
-title: Qué hacemos en la Asociación
-description: Queremos crear una red de apoyo de madre a madre, por medio de encuentros periódicos a los que puede asistir toda persona del entorno de la mujer lactante
+title: Nuestros encuentros en Cantabria
+description: Únete a nuestros encuentros mensuales en Cantabria. Espacios de apoyo de madre a madre, con comodidades para ti y tus pequeños. ¡Encuéntranos y participa!
 css:
   - que-hacemos
 ---
-{% assign meetings = site.data.meetings | sort: "order" %}
-{% assign current = site.data.mottos | where: "year", 2022 | first %}
-{% assign mottos  = site.data.mottos | where_exp: "motto", "motto.year != 2022" | sort: "year" %}
+{% assign meetings = site.data.meetings | sort: 'order' %}
+{% assign current = site.data.mottos | where: 'year', 2024 | first %}
+{% assign mottos = site.data.mottos | where_exp: 'motto', 'motto.year != 2024' | sort: 'year' %}
 
 <article>
   <header>
-    <h1 class="text-center">
-      Qué hacemo<span class="end">s</span>
-    </h1>
+    <h1 class="text-center">Qué hacemo<span class="end">s</span></h1>
   </header>
 
   <iframe
@@ -26,118 +24,126 @@ css:
   ></iframe>
 
   <section class="mb-5">
-    <h2 class="text-center">
-      Ven a nuestros encuentros
-    </h2>
+    <h2 class="text-center">Los encuentros</h2>
 
-    <div class="row">
-      <section class="col-12 col-md-6">
-        <p>
-          Queremos crear una red de apoyo de madre a madre con la experiencia de todas, por medio de encuentros periódicos a los que puede asistir toda persona del entorno de la mujer lactante (pareja, familiares, personal sanitario, etc...)
-        </p>
+    <section>
+      <p>
+        Son nuestra labor principal donde creamos una red de apoyo de madre a madre con la experiencia de todas las
+        familias, a ellos pueden acudir toda persona del entorno de la mujer lactante (pareja, familiares, personal
+        sanitario, etc...).
+      </p>
 
-        <p>
-          <strong>En los encuentros podrás:</strong>
-          <ul>
-            <li>Encontrar información general sobre lactancia y crianza</li>
-            <li>Plantear tus dudas</li>
-            <li>Solicitar la observación de una toma</li>
-            <li>Obtener el apoyo emocional que necesitas</li>
-            <li>Conocer material de lactancia</li>
-            <li>Aprender a portear</li>
-          </ul>
-        </p>
+      <div class="alert alert-dark">
+        Pedimos, por favor, que si acudís con juguetes para los peques, no sean sonoros para que no interfieran en el
+        buen desarrollo del encuentro.
+      </div>
+    </section>
 
-        <p>
-          También disponemos de un servicio de <a href="/contacto" title="Contacta con nosotras">atención telefónica y correo electrónico</a>.
-        </p>
-      </section>
-      <section class="col-12 col-md-6">
-        <div class="alert alert-info">
-          <p>
-            Alguno de nuestros encuentros se realizan <em>online</em> y de manera gratuita, para asistir lo único necesario es que nos contactes por correo electrónico a <a href="mailto:{{site.email}}"><span class="obfuscated-email" data-website="{{site.email | split: '@' | last | split: '' | reverse | join: '' }}" data-user="{{site.email | split: '@' | first | split: '' | reverse | join: '' }}"></span></a>. ¡Te esperamos!
-          </p>
-        </div>
-
-        <ul class="list-group encuentros-ul">
-          {% for meeting in meetings %}
-            <li class="list-group-item">
-              <address>
-                {% if meeting.maps %}
-                <a href="{{ meeting.maps }}" class="arrow-maps" data-toggle="tooltip" data-placement="top" title="Ver en Google Maps">
+    <section>
+      <ul class="list-group encuentros-ul">
+        {% for meeting in meetings %}
+          <li class="list-group-item">
+            <address>
+              {% if meeting.maps %}
+                <a
+                  href="{{ meeting.maps }}"
+                  class="arrow-maps"
+                  data-toggle="tooltip"
+                  data-placement="top"
+                  title="Ver en Google Maps"
+                >
                   <i class="fa fa-location-arrow"></i>
                   <strong>{{ meeting.location }}</strong>
                   <i class="fas fa-external-link-alt"></i>
                 </a>
-                {% else %}
-                  <strong>{{meeting.location}}</strong>
-                {% endif %}
-                {% if meeting.location_help %} ({{meeting.location_help}}){% endif %}<br/>
-                {{ meeting.place }}<br/>
-                {% if meeting.street %}
-                  {{ meeting.street }}{% if meeting.street_help %} ({{meeting.street_help}}){% endif %}<br/>
-                {% endif %}
-                {{ meeting.day }}:<br/>
-                De {{ meeting.start }} a {{ meeting.end }}
-              </address>
-            </li>
-          {% endfor %}
-        </ul>
-      </section>
-    </div>
+              {% else %}
+                <strong>{{ meeting.location }}</strong>
+              {% endif %}
+              <br>
+              {{ meeting.place -}}
+              {% if meeting.location_help %} ({{ meeting.location_help }}){% endif -%}
+              <br>
+              {% if meeting.street %}
+                {{ meeting.street -}}
+                {%- if meeting.street_help %} ({{ meeting.street_help }}){% endif -%}
+                <br>
+              {% endif %}
+              {{ meeting.day }}:<br>
+              De {{ meeting.start }} a {{ meeting.end }}
+            </address>
+
+            {% assign paragraphs = meeting.description | newline_to_br | strip_newlines | split: '<br />' %}
+            {% for paragraph in paragraphs %}
+              <p>{{ paragraph }}</p>
+            {% endfor %}
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
   </section>
 
   <section>
-    <header>
-      <h2 class="text-center">
-        Actividades
-      </h2>
-    </header>
+    <p>
+      <strong>Pero La Buena Leche no es solo eso.</strong>
+      Con la energía, cariño, experiencia, conocimientos y compromiso de
+      <a href="/asociate/" title="Asóciate">voluntariado de las socias y colaboradores</a> ponemos en marcha diferentes
+      acciones.
+    </p>
 
-    <div class="row">
-      <div class="col-12 col-lg-4">
-        <section>
-          <h3>Talleres</h3>
-
-          <p>Ofrecidos como actividades puntuales:</p>
-          <ul>
-            <li>Porteo</li>
-            <li>Masaje infantil</li>
-            <li>Estiramientos para las mamás con su bebé encima</li>
-            <li>Herramientas para manejar el stress durante la lactancia</li>
-            <li>Trabajo de suelo pélvico</li>
-          </ul>
-        </section>
-      </div>
-
-      <div class="col-12 col-lg-4">
-        <section>
-          <h3>Conferencias</h2>
-
-          <p>Ofrecemos a grupos y centros interesados diferentes charlas:</p>
-          <ul>
-            <li>Lactancia materna: práctica, dudas, principales dificultades y papel de los grupos de apoyo</li>
-            <li>Lactancia: como empezar</li>
-            <li>El rol del padre en la lactancia materna</li>
-            <li>Alimentación complementaria y destete</li>
-            <li>Cómo funcionan los grupos de apoyo (charla-taller)</li>
-          </ul>
-
-        </section>
-      </div>
-      <div class="col-12 col-lg-4">
-        <section>
-          <h3>Exposiciones</h3>
-
-          <ul>
-            <li>Material de lactancia</li>
-            <li>Pinturas de Paz Treuquil (pintura indígena sobre la mujer)</li>
-            <li>Fotografías</li>
-            <li>Posters temáticos</li>
-          </ul>
-        </section>
-      </div>
-    </div>
+    <ul class="list-group">
+      <li class="list-group-item">
+        <h3 class="h4">Consultas individuales</h3>
+        <ul>
+          <li>Redes sociales</li>
+          <li>Correo electrónico</li>
+          <li>Teléfono / WhatsApp</li>
+        </ul>
+      </li>
+      <li class="list-group-item">
+        <h3 class="h4">Red de apoyo</h3>
+        <ul>
+          <li>Encuentros presenciales entre madres</li>
+        </ul>
+      </li>
+      <li class="list-group-item">
+        <h3 class="h4">Servicios</h3>
+        <ul>
+          <li>Alquiler de extractores</li>
+          <li>Préstamo de material audiovisual y biblioteca</li>
+        </ul>
+      </li>
+      <li class="list-group-item">
+        <h3 class="h4">Actividades puntuales</h3>
+        <ul>
+          <li>Conferencias</li>
+          <li>Mesas redondas</li>
+          <li>Exposiciones</li>
+        </ul>
+      </li>
+      <li class="list-group-item">
+        <h3 class="h4">Servicio Cántabro de Salud</h3>
+        <ul>
+          <li>Colaboración con matronas</li>
+          <li>Representanción en las comisiones IHAN</li>
+        </ul>
+      </li>
+      <li class="list-group-item">
+        <h3 class="h4">Proyectos</h3>
+        <ul>
+          <li>Calendario de apoyo a la lactancia materna</li>
+          <li>Semana europea de la Lactancia Materna</li>
+          <li>Representación en el consejo de la mujer - Gobierno de Cantabria</li>
+        </ul>
+      </li>
+      <li class="list-group-item">
+        <h3 class="h4">Ocio</h3>
+        <ul>
+          <li>Picnic anual</li>
+          <li>Comida anual</li>
+          <li>Magosta</li>
+        </ul>
+      </li>
+    </ul>
   </section>
 
   <section class="my-5">
@@ -145,8 +151,8 @@ css:
 
     <p>
       La semana mundial de la lactancia materna se crea en 1992 por la WABA y UNICEF con el objetivo de difundir y
-      promover los beneficios de la
-      lactancia materna, ya que la tasa había disminuido drásticamente en las décadas anteriores.
+      promover los beneficios de la lactancia materna, ya que la tasa había disminuido drásticamente en las décadas
+      anteriores.
     </p>
 
     <p>
@@ -166,7 +172,14 @@ css:
     </ul>
 
     <p class="text-right">
-      <button class="btn btn-link text-muted" type="button" data-toggle="collapse" data-target="#collapseMottos" aria-expanded="false" aria-controls="collapseMottos">
+      <button
+        class="btn btn-link text-muted"
+        type="button"
+        data-toggle="collapse"
+        data-target="#collapseMottos"
+        aria-expanded="false"
+        aria-controls="collapseMottos"
+      >
         <small>Ver lemas de años anteriores</small>
       </button>
     </p>
@@ -174,33 +187,14 @@ css:
     <div class="collapse" id="collapseMottos">
       {% for motto in mottos reversed %}
         {% cycle '<div class="row">', '' %}
-          <div class="col-12 col-md-6 mb-3">
-            <blockquote class="blockquote {% cycle 'text-left', 'text-right' %}">
-              <p class="mb-0">{{ motto.title }}</p>
-              <footer class="blockquote-footer">{{ motto.year }}</footer>
-            </blockquote>
-          </div>
+        <div class="col-12 col-md-6 mb-3">
+          <blockquote class="blockquote {% cycle 'text-left', 'text-right' %}">
+            <p class="mb-0">{{ motto.title }}</p>
+            <footer class="blockquote-footer">{{ motto.year }}</footer>
+          </blockquote>
+        </div>
         {% cycle '', '</div>' %}
       {% endfor %}
     </div>
-  </section>
-
-  <section>
-    <h3>Lúdicas</h2>
-
-    <section>
-        <p>
-          Creamos espacios de ocio en los que las familias mantengan los lazos y el contacto que durante los años se han ido forjando en los encuentros, pero también en los que se pueda crear una unión con las nuevas generaciones, y todo ello de una manera lúdica.
-        </p>
-
-        <p>
-          Además del ya consolidado <strong>picnic anual</strong>, éstas son algunas de las actividades:
-        </p>
-
-        <ul>
-          <li>Paseo en bici por la Vía Verde de Puente Viesgo con posterior picnic.</li>
-          <li>Buscando y decorando huevos de pascua.</li>
-        </ul>
-      </section>
   </section>
 </article>

@@ -51,14 +51,20 @@ js:
 
   <!-- Asóciate -->
   <section id="donate" class="container text-center my-5 d-flex flex-column justify-content-center">
-    {% assign current = site.data.mottos | where: "year", 2019 | first %}
+    {% assign current = site.data.mottos | where: "year", 2024 | first %}
     <header>
       <h2>Asóciate</h2>
     </header>
 
     <h3 class="mb-3">{{ current.title }}</h3>
 
-    {% include partials/_associate-icons.html %}
+    <p class="text-left">
+      <a href="/asociate/">Nuestra cuota es pequeña</a>, de <strong>20€ al año</strong>, ¡y puedes complementarla uniéndote a nuestro
+      <a href="//www.teaming.net/asociacionlabuenaleche">Teaming <i class="fas fa-external-link-alt"></i></a>! 
+      Las socias impulsan la labor de la asociación. Son las que nutren, discretamente, y su aportación es importante
+      pues es el ingreso recurrente con el que hacemos folletos, damos un agradecimiento a las personas ponentes de
+      charlas y talleres que realizamos, cubrimos gastos derivados de las actividades...
+    </p>
 
     {% include partials/_teaming.html %}
   </section>
@@ -86,15 +92,10 @@ js:
                 {% else %}
                   <div class="carousel-item pb-4">
                 {% endif %}
-                  <!-- <div class="media">
-                    <img class="align-self-center mr-3 rounded-circle" src="{{ blockquote.avatar }}" alt="Fotografía de {{ blockquote.name }}">
-                    <div class="media-body"> -->
-                      <blockquote class="blockquote text-center">
-                        <p class="mb-0">{{ blockquote.quote }}</p>
-                        <footer class="blockquote-footer">{{ blockquote.name }}</footer>
-                      </blockquote>
-                    <!-- </div>
-                  </div> -->
+                  <blockquote class="blockquote text-center">
+                    <p class="mb-0">{{ blockquote.quote }}</p>
+                    <footer class="blockquote-footer">{{ blockquote.name }}</footer>
+                  </blockquote>
                 </div>
               {% endfor %}
             </div>
@@ -112,54 +113,4 @@ js:
       </div>
     </div>
   </section>
-
-  <!-- Blog -->
-  {% comment %}
-  <section class="my-5 container d-flex flex-column justify-content-center">
-    <header class="text-center">
-      <h2>Nuestro blog</h2>
-    </header>
-
-    <div id="entries">
-      <div class="loader">
-        <div class="spinner">
-          <div class="spinner">
-            <div class="spinner">
-              <div class="spinner">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  {% endcomment %}
-
-  {% comment %}
-  <section class="border-top my-5 py-5 d-flex flex-column justify-content-center">
-    <header class="text-center">
-      <h2>Próximos encuentros</h2>
-    </header>
-
-
-    <div class="container">
-      <p>
-        Los encuentros que realizamos son de manera gratuita y para asistir a los que <b>son online</b> lo único necesario es que nos contactes por correo electrónico a <a href="mailto:{{site.email}}"><span class="obfuscated-email" data-website="{{site.email | split: '@' | last | split: '' | reverse | join: '' }}" data-user="{{site.email | split: '@' | first | split: '' | reverse | join: '' }}"></span></a>. ¡Te esperamos!
-      </p>
-    </div>
-
-    <!-- <div id="meetings" class="container">
-      <div class="loader">
-        <div class="spinner">
-          <div class="spinner">
-              <div class="spinner">
-                  <div class="spinner">
-                  </div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
-  </section>
-  {% endcomment %}
 </article>

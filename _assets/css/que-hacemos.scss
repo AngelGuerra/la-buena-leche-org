@@ -1,6 +1,13 @@
 #que-hacemos {
+  .encuentros-ul {
+    li > address ~ p {
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+
   .blockquote {
-    font-size: 1em;
+    font-size: 1rem;
   }
 
   #collapseMottos {

@@ -10,22 +10,10 @@
   whatsapp: false
   help: null
   icon: fa fa-phone
-- phone: "646091412"
-  label: "646 09 14 12"
-  name: Marta
-  whatsapp: false
-  help: null
-  icon: fa fa-phone
 
 - phone: "626605415"
   label: "626 60 54 15"
   name: Lorena
-  whatsapp: true
-  help: "WhatsApp"
-  icon: fab fa-whatsapp
-- phone: "653964538"
-  label: "653 96 45 38"
-  name: Narelia
   whatsapp: true
   help: "WhatsApp"
   icon: fab fa-whatsapp

@@ -1,34 +1,37 @@
 ---
 layout: default
 title: Contacta con nosotras
-description: En la Asociación no contamos con una ubicación física pero puedes asistir a cualquiera de nuestras reuniones o localizarnos de la manera que más cómoda te resulte
+description: Descubre cómo asistir a nuestras reuniones en Santander y Torrelavega o contactarnos fácilmente por teléfono, correo electrónico y redes sociales
 css:
   - contacto
 ---
 
 <article>
   <header>
-    <h1 class="text-center">
-      Contacta con nosotra<span class="end">s</span>
-    </h1>
+    <h1 class="text-center">Contacta con nosotra<span class="end">s</span></h1>
   </header>
 
   <section>
     <p>
-      En la Asociación no contamos con una ubicación física, pero si lo necesitas, <a href="encuentros" title="Encuentros de la Asociación">puedes asistir a cualquiera de nuestras reuniones</a> en Solares, Tanos-Torrelavega, Santander, Castro Urdiales y Puente San Miguel.
+      En la Asociación no disponemos de una sede física, pero <a href="/que-hacemos/" title="Encuentros de la Asociación">puedes asistir a cualquiera de nuestras reuniones</a> en Santander y Torrelavega, donde estaremos encantadas de recibirte.
     </p>
-
+    
     <p>
-      Puedes localizarnos en los siguientes teléfonos de contacto, <strong>llamando de 09:00 a 21:00</strong>, en los que gustosamente atenderemos tus consultas, a través de nuestro correo electrónico, o también nos puedes encontrar en Facebook y Twitter:
+      Para ponerte en contacto con nosotras, puedes llamarnos al teléfono de <strong>09:00 a 21:00</strong>. También puedes enviarnos un correo electrónico o seguirnos en nuestras redes sociales: <a href="//www.instagram.com/{{site.social.instagram}}">Instagram</a>, <a href="//es-es.facebook.com/{{site.social.facebook}}">Facebook</a> y <a href="//twitter.com/{{site.social.twitter}}">Twitter</a>. Estaremos encantados de resolver tus dudas y brindarte toda la información que necesites.
     </p>
 
     <div class="list-group">
       {% for contact in site.data.contacts %}
-      {% assign link = "tel:" %}
+        {% assign link = "tel:" %}
         {% if contact.whatsapp %}
           {% assign link = "//wa.me/34" %}
         {% endif %}
-        <a href="{{link | append: contact.phone}}" class="list-group-item list-group-item-action flex-column align-items-start" rel="nofollow" title="Télefono de contacto de {{contact.name}}">
+        <a
+          href="{{link | append: contact.phone}}"
+          class="list-group-item list-group-item-action flex-column align-items-start"
+          rel="nofollow"
+          title="Télefono de contacto de {{contact.name}}"
+        >
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1"><i class="{{contact.icon}}"></i> {{contact.name}}</h5>
           </div>
@@ -40,71 +43,44 @@ css:
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1"><i class="fa fa-envelope"></i> Correo electrónico</h5>
         </div>
-        <p class="mb-1"><span class="obfuscated-email" data-website="{{site.email | split: '@' | last | split: '' | reverse | join: '' }}" data-user="{{site.email | split: '@' | first | split: '' | reverse | join: '' }}"></span></p>
+        <p class="mb-1">
+          <span
+            class="obfuscated-email"
+            data-website="{{site.email | split: '@' | last | split: '' | reverse | join: '' }}"
+            data-user="{{site.email | split: '@' | first | split: '' | reverse | join: '' }}"
+          ></span>
+        </p>
       </a>
-      <a href="//es-es.facebook.com/{{site.social.facebook}}" class="list-group-item list-group-item-action flex-column align-items-start" title="Página de Facebook">
+      <a
+        href="//es-es.facebook.com/{{site.social.facebook}}"
+        class="list-group-item list-group-item-action flex-column align-items-start"
+        title="Página de Facebook"
+      >
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1"><i class="fab fa-facebook"></i> Facebook</h5>
         </div>
         <p class="mb-1">La Buena Leche <i class="fas fa-external-link-alt"></i></p>
       </a>
-      <a href="//www.instagram.com/{{site.social.instagram}}" class="list-group-item list-group-item-action flex-column align-items-start"  title="Página de Facebook">
+      <a
+        href="//www.instagram.com/{{site.social.instagram}}"
+        class="list-group-item list-group-item-action flex-column align-items-start"
+        title="Página de Instagram"
+      >
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1"><i class="fab fa-instagram"></i> Instagram</h5>
         </div>
         <p class="mb-1">La Buena Leche Asociación <i class="fas fa-external-link-alt"></i></p>
       </a>
-      <a href="//twitter.com/{{site.social.twitter}}" class="list-group-item list-group-item-action flex-column align-items-start" title="Twitter">
+      <a
+        href="//twitter.com/{{site.social.twitter}}"
+        class="list-group-item list-group-item-action flex-column align-items-start"
+        title="Twitter"
+      >
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1"><i class="fab fa-twitter"></i> Twitter</h5>
         </div>
         <p class="mb-1"><i class="fa fa-at"></i>AsocacionLBL <i class="fas fa-external-link-alt"></i></p>
       </a>
-    </ul>
-
-    {% comment %}
-    <div class="card shadow-sm">
-      <div class="card-body">
-        <form action="https://formspree.io/your@email.com" method="POST">
-
-          <div class="form-row">
-            <div class="form-group col-lg-6">
-              <label for="name">¿Cómo te llamas?</label>
-              <input type="text" class="form-control" name="name" id="name" placeholder="Nombre" required>
-            </div>
-
-            <div class="form-group col-lg-6">
-              <label for="contact">¿Cómo nos podemos poner en contacto contigo?</label>
-              <input type="text" class="form-control" name="contact" id="contact" aria-describedby="contactHelp" placeholder="Email o teléfono" required>
-              <small id="contactHelp" class="form-text text-muted">Siéntete libre de darnos tu número de teléfono o tu correo electrónico para poder ayudarte.</small>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="comment">¿Qué necesitas?</label>
-            <textarea class="form-control" name="comment" id="comment" rows="4" placeholder="Describe tu problema, duda..." required></textarea>
-          </div>
-
-          <hr>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="legal" aria-describedby="legalHelp" required>
-            <label class="form-check-label" for="legal">Acepto la política de privacidad</label>
-          </div>
-
-          <div class="form-check">
-            <input type="checkbox" class="form-check-input" id="news">
-            <label class="form-check-label" for="news">Quiero recibir noticias relacionadas con la Asociación</label>
-          </div>
-
-          <hr>
-
-          <button type="submit" class="btn btn-primary">Enviar</button>
-
-          <small id="legalHelp" class="form-text text-muted">En la Buena Leche no compartimos la información con terceros y los datos que recogemos en este formulario son con el único objetivo de poder ayudarte, para cumplir la Ley debes aceptar la política de privacidad de la Asociación.<br/>Asimismo, te informamos que utilizamos un servicio de terceros (<a href="//formspree.io/" rel="nofollow">Formspree <i class="fas fa-external-link-alt"></i></a>) para hacer funcionar este formulario y te remitimos a su <a href="//docs.formspree.io/files/privacy.pdf" rel="nofollow">política de privacidad <i class="fas fa-external-link-alt"></i></a>.</small>
-        </form>
-      </div>
     </div>
-    {% endcomment %}
   </section>
 </article>
