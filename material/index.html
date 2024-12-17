@@ -1,80 +1,150 @@
 ---
 layout: default
-title: Material a tu disposición
+title: Material de apoyo y extractores de leche
 description: En la asociación ponemos a tu disposición distintos elementos que pueden serte útiles como extractores de leche, libros o documentales
 ---
 
 <article>
   <header>
-    <h1 class="text-center">
-      Material a tu disposició<span class="end">n</span>
-    </h1>
+    <h1 class="text-center">Material de apoyo y extractores de leche<span class="end">e</span></h1>
+    <p>
+      Descubre información sobre el alquiler de extractores de leche, materiales de muestra y recursos audiovisuales
+      útiles para acompañar el proceso de lactancia materna.
+    </p>
   </header>
 
-  <section class="mb-3">
+  <section>
     <header>
-      <h2>Extractores de leche</h2>
+      <h2>Extractores de Leche</h2>
     </header>
 
     <p>
-      Los extractores no son imprescindibles durante la lactancia. Por este motivo, no es necesario que cada mujer adquiera uno sin saber si va a llegar a usarlo. No obstante, pueden resultar muy útiles en momentos concretos. Si éste es tu caso, podemos facilitarte uno con todos sus accesorios generales por 25 euros al mes.
+      Los extractores no son imprescindibles durante la lactancia. Por este motivo, no es necesario que cada mujer
+      adquiera uno sin saber si va a llegar a usarlo. No obstante, pueden resultar muy útiles en momentos concretos. Si
+      éste es tu caso, podemos facilitarte uno con sus accesorios y asesorarte según tus necesidades. Disponemos de
+      varios modelos eléctricos de alta potencia y fáciles de usar.
     </p>
 
     <p>
-      Disponemos de tres modelos eléctricos de alta potencia y fáciles de usar. Puedes escoger el que más se adapte a tus necesidades. Consulta con Blanca en el <a href="tel:680747305" title="Blanca" rel="nofollow">680 74 73 05</a>.
+      <strong>Consulta con nuestras asesoras:</strong>
+    </p>
+    <ul>
+      {% assign blanca = site.data.contacts | where: 'name', 'Blanca' | first %}
+      <li>
+        {{blanca.name}}:
+        <a href="tel:{{blanca.phone}}" rel="nofollow" title="Télefono de contacto de {{blanca.name}}">
+          {{blanca.label}}
+        </a>
+        (Santander)
+      </li>
+      {% assign annia = site.data.contacts | where: 'name', 'Annia' | first %}
+      <li>
+        {{annia.name}}:
+        <a href="tel:{{annia.phone}}" rel="nofollow" title="Télefono de contacto de {{annia.name}}">
+          {{annia.label}}
+        </a>
+        (Maliaño)
+      </li>
+      {% assign miriam = site.data.contacts | where: 'name', 'Miriam' | first %}
+      <li>
+        {{miriam.name}}:
+        <a href="tel:{{miriam.phone}}" rel="nofollow" title="Télefono de contacto de {{miriam.name}}">
+          {{miriam.label}}
+        </a>
+        (Boo de Piélagos)
+      </li>
+    </ul>
+
+    <p>
+      <strong>Precios del alquiler:</strong>
+      <br />
+      20€ para socias | 35€ para no socias
+      <br />
+      <strong>Fianza:</strong> 50€ (devuelta al entregar el sacaleches en perfecto estado).
+    </p>
+
+    <p>Para el contrato de alquiler se requiere:</p>
+    <ul>
+      <li>Fotocopia del DNI de la mamá.</li>
+      <li>Resguardo del ingreso bancario.</li>
+    </ul>
+
+    <p>
+      <strong>Datos para el ingreso:</strong>
+      <br />
+      Concepto: <em>Nombre de quien alquila el sacaleches</em>.
+      <br />
+      Cuenta bancaria: <strong>{{ site.iban }}</strong>.
     </p>
   </section>
 
-  <section class="mb-3">
-
-    <div class="row">
-      <div class="col-12 col-lg-4">
-        <h2>Material de muestra</h2>
-
-        <ul class="fa-ul">
-          {% for item in site.data.materials['samples'] %}
-            <li><span class="fa-li"><i class="fa fa-check"></i></span> {{ item }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-
-      <div class="col-12 col-lg-4">
-        <h2>Material audiovisual</h2>
-
-        <ul class="fa-ul">
-          {% for item in site.data.materials['videos'] %}
-            <li><span class="fa-li"><i class="fa fa-video"></i></span> {{ item }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-
-      <div class="col-12 col-lg-4">
-        <h2>Documentales</h2>
-
-        <p>Ofrecidos como actividad puntual junto a coloquio:</p>
-        <ul class="fa-ul">
-          {% for item in site.data.materials['documentaries'] %}
-            <li><span class="fa-li"><i class="fa fa-film"></i></span> {{ item }}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="mb-3">
+  <section>
     <header>
-      <h2>Préstamo de libros</h2>
+      <h2>Material de Muestra</h2>
     </header>
 
     <p>
-      Bibliografía y material audiovisual que la Asociación pone a tu disposición:
+      El siguiente material está disponible como muestra, pero es necesario solicitarlo con antelación para que esté
+      disponible en los encuentros:
     </p>
 
-    <ul class="fa-ul">
-      {% for item in site.data.materials['books'] %}
-        <li><span class="fa-li"><i class="fa fa-book"></i></span> {{ item }}</li>
-      {% endfor %}
+    <ul>
+      <li>Bandoleras, fulares y mochilas</li>
+      <li>Copas de extractores</li>
+      <li>Pezoneras</li>
+      <li>Conchas protectoras y recolectoras</li>
+      <li>Colectores</li>
+      <li>Relactadores</li>
     </ul>
   </section>
+
+  <section>
+    <header>
+      <h2>Material Audiovisual</h2>
+    </header>
+    <p>Ponemos a tu disposición material audiovisual útil para informarte sobre la lactancia materna:</p>
+    <ul>
+      <li>
+        <em>La vida fetal, el nacimiento y la salud</em>
+        (DVD Dr. Michel Odent)
+      </li>
+      <li>
+        <em>Amamantar: Salud y Placer</em>
+        (REGAZO, Grupo de Apoyo a la Lactancia Materna de Jerez)
+      </li>
+      <li>
+        <em>Buena leche, lactancia y vida</em>
+        (Producido por la Consejería de Sanidad del Gobierno de Cantabria y la Asociación La Buena Leche)
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <header>
+      <h2>Documentales</h2>
+    </header>
+
+    <p>Ofrecemos la proyección de documentales como actividad puntual, junto a un coloquio:</p>
+
+    <ul>
+      <li><em>Lactancia y Vida</em> (La Buena Leche, 2007)</li>
+      <li><em>El pecho no tiene horario</em> (Dra. Gro Nylander)</li>
+      <li><em>La postura biológica para amamantar</em> (Suzanne Colson, 2011)</li>
+      <li><em>Método Madre Canguro</em> (Nils Bergman)</li>
+      <li><em>Amamantar: salud y placer</em> (Grupo Regazo)</li>
+      <li>
+        <em>Lactancia materna... en gotas</em>
+        (Unicef y Principado de Asturias, 2001)
+      </li>
+      <li><em>Un feliz acontecimiento</em> (Rémi Bezançon, 2011)</li>
+      <li><em>La vida fetal, el nacimiento y la salud</em> (Dr. Michel Odent)</li>
+      <li><em>Tus primeros pasos con mamá</em></li>
+      <li><em>Bebés</em> (Thomas Balmes, 2010)</li>
+    </ul>
+  </section>
+
+  <footer class="alert alert-dark">
+    Todos estos materiales y recursos están disponibles para ayudarte durante tu lactancia. No dudes en ponerte en
+    contacto con nuestras asesoras para obtener más información.
+  </footer>
 </article>
