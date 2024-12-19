@@ -5,6 +5,7 @@ description: Únete a nuestros encuentros mensuales en Cantabria. Espacios de ap
 css:
   - que-hacemos
 ---
+
 {% assign meetings = site.data.meetings | sort: 'order' %}
 {% assign current = site.data.mottos | where: 'year', 2024 | first %}
 {% assign mottos = site.data.mottos | where_exp: 'motto', 'motto.year != 2024' | sort: 'year' %}
@@ -14,14 +15,15 @@ css:
     <h1 class="text-center">Qué hacemo<span class="end">s</span></h1>
   </header>
 
-  <iframe
-    src="https://www.youtube-nocookie.com/embed/eWMp1xzUS-I"
-    title="Vídeo de presentación en YouTube"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    class="video-player"
-    allowfullscreen
-  ></iframe>
+  <div class="ratio ratio-16x9 mb-5 mx-auto" style="max-width: 696px">
+    <iframe
+      src="https://www.youtube-nocookie.com/embed/eWMp1xzUS-I?si=R0vtczsxuS9Bb8wR"
+      title="Vídeo de presentación en YouTube"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin"
+      allowfullscreen
+    ></iframe>
+  </div>
 
   <section class="mb-5">
     <h2 class="text-center">Los encuentros</h2>
@@ -164,10 +166,12 @@ css:
 
     <ul class="list-group list-group-flush">
       <li class="list-group-item">
-        <blockquote class="blockquote text-center">
-          <p class="mb-0">{{ current.title }}</p>
-          <footer class="blockquote-footer">{{ current.year }}</footer>
-        </blockquote>
+        <figure class="text-center">
+          <blockquote class="blockquote">
+            <p>{{ current.title }}</p>
+          </blockquote>
+          <figcaption class="blockquote-footer">{{ current.year }}</figcaption>
+        </figure>
       </li>
     </ul>
 
@@ -175,8 +179,8 @@ css:
       <button
         class="btn btn-link text-muted"
         type="button"
-        data-toggle="collapse"
-        data-target="#collapseMottos"
+        data-bs-toggle="collapse"
+        data-bs-target="#collapseMottos"
         aria-expanded="false"
         aria-controls="collapseMottos"
       >
@@ -188,10 +192,12 @@ css:
       {% for motto in mottos reversed %}
         {% cycle '<div class="row">', '' %}
         <div class="col-12 col-md-6 mb-3">
-          <blockquote class="blockquote {% cycle 'text-left', 'text-right' %}">
-            <p class="mb-0">{{ motto.title }}</p>
-            <footer class="blockquote-footer">{{ motto.year }}</footer>
-          </blockquote>
+          <figure class="{% cycle 'text-start', 'text-end' %}">
+            <blockquote class="blockquote">
+              <p>{{ motto.title }}</p>
+            </blockquote>
+            <figcaption class="blockquote-footer">{{ motto.year }}</figcaption>
+          </figure>
         </div>
         {% cycle '', '</div>' %}
       {% endfor %}

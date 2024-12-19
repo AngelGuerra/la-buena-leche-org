@@ -34,6 +34,7 @@ header {
               position: relative;
               text-decoration: none;
               font-family: $lbl-title-font;
+              font-optical-sizing: auto;
               color: #fff;
 
               &:hover,
@@ -55,12 +56,15 @@ header {
                 &:before {
                   opacity: 0;
                   transform: translateY(-$distance);
-                  transition: transform 0s $easeOutBack, opacity 0s;
+                  transition:
+                    transform 0s $easeOutBack,
+                    opacity 0s;
                 }
                 &:after {
                   opacity: 0;
                   transform: translateY($distance/2);
-                  transition: transform $duration $easeOutBack,
+                  transition:
+                    transform $duration $easeOutBack,
                     opacity $duration;
                 }
                 &:hover,
@@ -71,11 +75,13 @@ header {
                     transform: translateY(0);
                   }
                   &:before {
-                    transition: transform $duration $easeOutBack,
+                    transition:
+                      transform $duration $easeOutBack,
                       opacity $duration;
                   }
                   &:after {
-                    transition: transform 0s $duration $easeOutBack,
+                    transition:
+                      transform 0s $duration $easeOutBack,
                       opacity 0s $duration;
                   }
                 }

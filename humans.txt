@@ -15,11 +15,6 @@ encoding: utf-8
   Email: info [at] regazofotografia [dot] com
   From: Santander, Cantabria, Spain
 
-  Name: Hada López
-  Site: https://www.regazofotografia.com/
-  Email: info [at] regazofotografia [dot] com
-  From: Santander, Cantabria, Spain
-
   Name: My little sons
 
 /* SITE */
@@ -27,7 +22,7 @@ encoding: utf-8
   Last update: {{ site.time }}
   Doctype: HTML5
   Language: Spanish
-  Components: Bootstrap v4.x, jQuery v3.x, Pixabay (foto del pie de página https://pixabay.com/photo-827169/)
+  Components: Bootstrap v5.x
   Software: Jekyll
-  IDE: Visual Studio Code
+  IDE: Visual Studio Code, Zed Editor
   Github: https://github.com/AngelGuerra/la-buena-leche-org

@@ -1,12 +1,11 @@
 # Welcome to Jekyll!
 title: Asociación La Buena Leche
 email: labuenalecheasociacion@gmail.com
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://labuenaleche.org" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://labuenaleche.org"
 gtag: UA-66444400-1
 iban: ES88 0049 6742 54 2216337871
 
-# Social network and other links
 social:
   twitter: asociacionlbl
   facebook: AsociacionLaBuenaLeche
@@ -23,14 +22,11 @@ assets:
     css: { autoprefixer: {} }
   autoprefixer:
     browsers:
-    - "last 2 versions"
-    - "IE > 9"
+      - "last 2 versions"
+      - "IE > 9"
 
 notice: false
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -38,4 +34,6 @@ exclude:
   - vendor
   - README.md
   - Rakefile
-  - .apk
+  - Dockerfile
+  - entrypoint.sh
+  - docker-compose.yml

@@ -22,6 +22,7 @@ body {
   .h6 {
     font: {
       family: $lbl-title-font;
+      font-optical-sizing: auto;
     }
   }
 
@@ -105,7 +106,7 @@ body {
 
   .obfuscated-email {
     &::before {
-      content: attr(data-website) "\0040"attr(data-user);
+      content: attr(data-website) "\0040" attr(data-user);
       unicode-bidi: bidi-override;
       direction: rtl;
     }

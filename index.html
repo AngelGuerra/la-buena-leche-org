@@ -5,7 +5,6 @@ description: Deseamos que esta página sea una mano amiga donde puedas encontrar
 css:
   - home
 js:
-  - jquery.rss
   - home
 ---
 
@@ -58,9 +57,9 @@ js:
 
     <h3 class="mb-3">{{ current.title }}</h3>
 
-    <p class="text-left">
+    <p class="text-start">
       <a href="/asociate/">Nuestra cuota es pequeña</a>, de <strong>20€ al año</strong>, ¡y puedes complementarla uniéndote a nuestro
-      <a href="//www.teaming.net/asociacionlabuenaleche">Teaming <i class="fas fa-external-link-alt"></i></a>! 
+      <a href="//www.teaming.net/asociacionlabuenaleche">Teaming <i class="fas fa-external-link-alt"></i></a>!
       Las socias impulsan la labor de la asociación. Son las que nutren, discretamente, y su aportación es importante
       pues es el ingreso recurrente con el que hacemos folletos, damos un agradecimiento a las personas ponentes de
       charlas y talleres que realizamos, cubrimos gastos derivados de las actividades...
@@ -78,37 +77,47 @@ js:
     <div class="container">
       <div class="row">
         <div class="col-12 col-lg-10 offset-lg-1">
-          <div id="blockquotes-carousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-            <ol class="carousel-indicators">
+          <div id="blockquotes-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000">
+            <div class="carousel-indicators">
               {% for blockquote in site.data.blockquotes %}
-                <li data-target="#blockquotes-carousel" data-slide-to="{{forloop.index}}"{% if forloop.first %} class="active"{% endif %}></li>
+                <button
+                  type="button"
+                  data-bs-target="#blockquotes-carousel"
+                  data-bs-slide-to="{{forloop.index0}}"
+                  {% if forloop.first %}
+                  class="active"
+                  aria-current="true"
+                  {% endif %}
+                ></button>
               {% endfor %}
-            </ol>
+            </div>
 
             <div class="carousel-inner">
               {% for blockquote in site.data.blockquotes %}
-                {% if forloop.first == true %}
+                {% if forloop.first %}
                   <div class="carousel-item pb-4 active">
                 {% else %}
                   <div class="carousel-item pb-4">
                 {% endif %}
-                  <blockquote class="blockquote text-center">
-                    <p class="mb-0">{{ blockquote.quote }}</p>
-                    <footer class="blockquote-footer">{{ blockquote.name }}</footer>
-                  </blockquote>
+                  <figure class="text-center">
+                    <blockquote class="blockquote">
+                      <p>{{ blockquote.quote }}</p>
+                    </blockquote>
+                    <figcaption class="text-white blockquote-footer">{{ blockquote.name }}</figcaption>
+                  </figure>
                 </div>
               {% endfor %}
             </div>
           </div>
 
-          <a class="carousel-control-prev" href="#blockquotes-carousel" role="button" data-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#blockquotes-carousel" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Anterior</span>
-          </a>
-          <a class="carousel-control-next" href="#blockquotes-carousel" role="button" data-slide="next">
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#blockquotes-carousel" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Siguiente</span>
-          </a>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
         </div>
       </div>
     </div>

@@ -1,31 +1,11 @@
-<div id="fb-root"></div>
-
 <script
-  src="//code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"
-></script>
-<script
-  src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.js"
-  integrity="sha256-59IZ5dbLyByZgSsRE3Z0TjDuX7e1AiqW5bZ8Bg50dsU="
-  crossorigin="anonymous"
-></script>
-<script
-  src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/locale/es.js"
-  integrity="sha256-bETP3ndSBCorObibq37vsT+l/vwScuAc9LRJIQyb068="
-  crossorigin="anonymous"
-></script>
-<script
-  src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
-  integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
-  crossorigin="anonymous"
-></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.1.0/cookieconsent.min.js"></script>
-<script
-  src="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
-  integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
   crossorigin="anonymous"
 ></script>
 
-{% if page.js %} {% for js in page.js %} {% asset '{{ js }}.js' defer %} {%
-endfor %} {% endif %}
+{% if page.js %}
+  {% for js in page.js %}
+    {% asset '{{ js }}.js' defer %}
+  {% endfor %}
+{% endif %}

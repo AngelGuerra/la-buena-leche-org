@@ -1,25 +1,19 @@
 ---
 layout: compress
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="es-ES">
-	<head>
+  <head>
     {% include head.html %}
-	</head>
-	<body id="{{ page.css | join: ' ' }}">
+  </head>
+  <body id="{{ page.css | join: ' ' }}">
+    <header id="main-header" class="mb-0">{% include header.html %}</header>
 
-    <header id="main-header" class="mb-0">
-      {% include header.html %}
-    </header>
+    <main class="container my-5">{{ content }}</main>
 
-    <main class="container my-5">
-      {{ content }}
-    </main>
-
-    <footer id="main-footer">
-      {% include footer.html %}
-    </footer>
+    <footer id="main-footer">{% include footer.html %}</footer>
 
     {% include scripts.html %}
-	</body>
+  </body>
 </html>

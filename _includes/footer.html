@@ -7,19 +7,19 @@
     <div class="col-6 col-md-3">
       <address>
         {% if meeting.maps %}
-          <a
-            href="{{ meeting.maps }}"
-            class="arrow-maps"
-            data-toggle="tooltip"
-            data-placement="top"
-            title="Ver en Google Maps"
-          >
-            <i class="fa fa-location-arrow"></i>
-            <strong>{{ meeting.location }}</strong>
-            <i class="fas fa-external-link-alt"></i>
-          </a>
+        <a
+          href="{{ meeting.maps }}"
+          class="arrow-maps"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Ver en Google Maps"
+        >
+          <i class="fa fa-location-arrow"></i>
+          <strong>{{ meeting.location }}</strong>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
         {% else %}
-          <strong>{{meeting.location}}</strong>
+        <strong>{{meeting.location}}</strong>
         {% endif %}
         <br />
         <span>{{meeting.place}}</span>
@@ -43,22 +43,16 @@
         <li>
           <span class="fa-li"><i class="{{contact.icon}}"></i></span>
           <span class="d-none d-sm-block"
-            >{{contact.label}} - {{contact.name}}{% if contact.help %}
-            ({{contact.help}}){% endif %}</span
+            >{{contact.label}} - {{contact.name}}{% if contact.help %} ({{contact.help}}){% endif %}</span
           >
 
           <span class="d-block d-sm-none">
             {% if contact.whatsapp %}
-            <a href="//wa.me/34{{contact.phone}}" rel="nofollow"
-              >{{contact.label}}</a
-            >
+            <a href="//wa.me/34{{contact.phone}}" rel="nofollow">{{contact.label}}</a>
             {% else %}
             <a href="tel:{{contact.phone}}" rel="nofollow">{{contact.label}}</a>
             {% endif %}
-            <span
-              >- {{contact.name}}{% if contact.help %} ({{contact.help}}){%
-              endif %}</span
-            >
+            <span>- {{contact.name}}{% if contact.help %} ({{contact.help}}){% endif %}</span>
           </span>
         </li>
         {% endfor %}
@@ -91,36 +85,20 @@
       <p class="h3 mb-4">Síguenos</p>
       <ul class="fa-ul">
         <li>
-          <a
-            href="https://www.instagram.com/{{site.social.instagram}}"
-            rel="me noopener noreferrer"
-            target="_blank"
+          <a href="https://www.instagram.com/{{site.social.instagram}}" rel="me noopener noreferrer" target="_blank"
             >Instagram</a
           >
         </li>
         <li>
-          <a
-            href="https://es-es.facebook.com/{{site.social.facebook}}"
-            rel="me noopener noreferrer"
-            target="_blank"
+          <a href="https://es-es.facebook.com/{{site.social.facebook}}" rel="me noopener noreferrer" target="_blank"
             >Facebook</a
           >
         </li>
         <li>
-          <a
-            href="https://twitter.com/{{site.social.twitter}}"
-            rel="me noopener noreferrer"
-            target="_blank"
-            >Twitter</a
-          >
+          <a href="https://twitter.com/{{site.social.twitter}}" rel="me noopener noreferrer" target="_blank">Twitter</a>
         </li>
         <li>
-          <a
-            href="{{site.social.blog}}"
-            rel="me noopener noreferrer"
-            target="_blank"
-            >Antiguo blog</a
-          >
+          <a href="{{site.social.blog}}" rel="me noopener noreferrer" target="_blank">Antiguo blog</a>
         </li>
       </ul>
     </div>
@@ -130,7 +108,5 @@
 <hr />
 
 <div class="container">
-  <p class="text-center">
-    <i class="far fa-copyright"></i> Asociación La Buena Leche {{ 'now' | date: "%Y" }}
-  </p>
+  <p class="text-center"><i class="far fa-copyright"></i> Asociación La Buena Leche {{ 'now' | date: "%Y" }}</p>
 </div>
