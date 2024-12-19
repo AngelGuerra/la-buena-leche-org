@@ -10,36 +10,4 @@
       }
     }
   }
-
-  #welcome {
-    background-image: asset_url("home/welcome.jpg magick:resize=1920 magick:quality=90");
-    @media (max-width: 576px) {
-      background-image: asset_url("home/welcome.jpg magick:resize=576 magick:quality=90");
-    }
-    @media (max-width: 768px) {
-      background-image: asset_url("home/welcome.jpg magick:resize=768 magick:quality=90");
-    }
-    @media (max-width: 992px) {
-      background-image: asset_url("home/welcome.jpg magick:resize=992 magick:quality=90");
-    }
-    @media (max-width: 1200px) {
-      background-image: asset_url("home/welcome.jpg magick:resize=1200 magick:quality=90");
-    }
-  }
-
-  #quotes {
-    background-image: asset_url("home/quotes.jpg magick:resize=1920 magick:quality=90");
-    @media (max-width: 576px) {
-      background-image: asset_url("home/quotes.jpg magick:resize=576 magick:quality=90");
-    }
-    @media (max-width: 768px) {
-      background-image: asset_url("home/quotes.jpg magick:resize=768 magick:quality=90");
-    }
-    @media (max-width: 992px) {
-      background-image: asset_url("home/quotes.jpg magick:resize=992 magick:quality=90");
-    }
-    @media (max-width: 1200px) {
-      background-image: asset_url("home/quotes.jpg magick:resize=1200 magick:quality=90");
-    }
-  }
 }
