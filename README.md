@@ -78,6 +78,15 @@ Si prefieres usar Docker para el desarrollo, sigue estos pasos:
    JEKYLL_ENV=production jekyll build --strict_front_matter
    ```
 
+### Docker compose
+
+```bash
+docker compose up
+# docker compose run jekyll bundle install
+# docker compose run jekyll rake test
+docker compose run jekyll jekyll build --strict_front_matter
+```
+
 ## Troubleshooting
 
 ### Error: `Liquid Exception: You must have ImageMagick or GraphicsMagick installed in /_layouts/default.html`
