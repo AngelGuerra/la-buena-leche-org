@@ -87,7 +87,7 @@ docker compose up
 docker compose run jekyll jekyll build --strict_front_matter
 ```
 
-## Troubleshooting
+## roubleshooting
 
 ### Error: `Liquid Exception: You must have ImageMagick or GraphicsMagick installed in /_layouts/default.html`
 
