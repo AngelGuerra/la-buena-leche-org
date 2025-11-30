@@ -1,28 +1,22 @@
-- phone: "608448828"
-  label: "608 44 88 28"
-  name: Annia
-  whatsapp: false
-  help: null
-  icon: fa fa-phone
 - phone: "942709839"
   label: "942 70 98 39"
   name: Bea
   whatsapp: false
-  help: null
+  help: Consultas
   icon: fa fa-phone
 
-- phone: "626605415"
-  label: "626 60 54 15"
-  name: Lorena
+- phone: "648653087"
+  label: "648 65 30 87"
+  name: Elisa
   whatsapp: true
-  help: "WhatsApp"
+  help: "Sólo WhatsApp - Consultas"
   icon: fab fa-whatsapp
 
 - phone: "608448828"
   label: "608 44 88 28"
   name: Annia
   whatsapp: false
-  help: "Alquiler de sacaleches - Maliaño"
+  help: "Consultas y alquiler de sacaleches - Maliaño"
   icon: fa fa-phone
 - phone: "680747305"
   label: "680 74 73 05"

@@ -7,8 +7,8 @@ css:
 ---
 
 {% assign meetings = site.data.meetings | sort: 'order' %}
-{% assign current = site.data.mottos | where: 'year', 2024 | first %}
-{% assign mottos = site.data.mottos | where_exp: 'motto', 'motto.year != 2024' | sort: 'year' %}
+{% assign current = site.data.mottos | where: 'year', 2025 | first %}
+{% assign mottos = site.data.mottos | where_exp: 'motto', 'motto.year != 2025' | sort: 'year' %}
 
 <article>
   <header>
@@ -113,7 +113,7 @@ css:
         <h3 class="h4">Servicios</h3>
         <ul>
           <li>Alquiler de extractores</li>
-          <li>Préstamo de material audiovisual y biblioteca</li>
+          <li>Préstamo de material audiovisual</li>
         </ul>
       </li>
       <li class="list-group-item">
@@ -122,6 +122,7 @@ css:
           <li>Conferencias</li>
           <li>Mesas redondas</li>
           <li>Exposiciones</li>
+          <li>Talleres</li>
         </ul>
       </li>
       <li class="list-group-item">
@@ -129,22 +130,28 @@ css:
         <ul>
           <li>Colaboración con matronas</li>
           <li>Representanción en las comisiones IHAN</li>
+          <li>
+            Colaboración con el banco de leche del
+            <abbr title="Hospital Universitario Marqués de Valdecilla">HUMV</abbr>
+          </li>
         </ul>
       </li>
       <li class="list-group-item">
         <h3 class="h4">Proyectos</h3>
         <ul>
-          <li>Calendario de apoyo a la lactancia materna</li>
-          <li>Semana europea de la Lactancia Materna</li>
+          <li>Calendario anual de apoyo a la lactancia materna</li>
+          <li>Jornadas LBL durante la Semana Europea de la Lactancia Materna</li>
           <li>Representación en el consejo de la mujer - Gobierno de Cantabria</li>
         </ul>
       </li>
       <li class="list-group-item">
         <h3 class="h4">Ocio</h3>
         <ul>
-          <li>Picnic anual</li>
           <li>Comida anual</li>
-          <li>Magosta</li>
+          <li>Actividad de huevos de Pascua</li>
+          <li>Pícnic anual</li>
+          <li>Actividad de magosta y farolillos</li>
+          <li>Excursiones eventuales</li>
         </ul>
       </li>
     </ul>
